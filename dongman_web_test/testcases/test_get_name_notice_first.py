@@ -1,4 +1,4 @@
-from dongman_web_test.pagefile.main_page import MainPage
+from dongman_web_test.webpages.main_page import MainPage
 
 
 class TestGetNameNoticeFirst():

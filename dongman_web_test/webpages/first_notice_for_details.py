@@ -2,7 +2,7 @@ import time
 
 from selenium.webdriver.common.by import By
 
-from dongman_web_test.pagefile.basepage import BasePage
+from dongman_web_test.webpages.basepage import BasePage
 
 
 class NoticeFirstDetailPage(BasePage):

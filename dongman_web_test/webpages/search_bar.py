@@ -2,8 +2,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 
 
-from dongman_web_test.pagefile.basepage import BasePage
-from dongman_web_test.pagefile.view_page import ViewPage
+from dongman_web_test.webpages.basepage import BasePage
+from dongman_web_test.webpages.view_page import ViewPage
 
 
 class SearchPage(BasePage):

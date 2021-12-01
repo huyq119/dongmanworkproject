@@ -3,10 +3,10 @@ import time
 from selenium.webdriver import TouchActions, ActionChains
 from selenium.webdriver.common.by import By
 
-from dongman_web_test.pagefile.basepage import BasePage
-from dongman_web_test.pagefile.notice_first_detail_page import NoticeFirstDetailPage
-from dongman_web_test.pagefile.notice_list_page import NoticeListPage
-from dongman_web_test.pagefile.search_bar import SearchPage
+from dongman_web_test.webpages.basepage import BasePage
+from dongman_web_test.webpages.first_notice_for_details import NoticeFirstDetailPage
+from dongman_web_test.webpages.notice_list_page import NoticeListPage
+from dongman_web_test.webpages.search_bar import SearchPage
 
 
 class MainPage(BasePage):

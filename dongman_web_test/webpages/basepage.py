@@ -73,7 +73,7 @@ class BasePage():
         self._driver.find_element(By.CSS_SELECTOR, "#btnLogIn").click()
         sleep(2)
         _cookies = self._driver.get_cookies()
-        with open("../pagefile/cookies.json", "w") as f:
+        with open("../webpages/cookies.json", "w") as f:
             json.dump(_cookies, f)
 
     def _cookie_login(self):
@@ -87,7 +87,7 @@ class BasePage():
         WebDriverWait(self._driver, 5).until(expected_conditions.element_to_be_clickable(
             (By.CSS_SELECTOR, "#btnLogin")))
         self._driver.find_element(By.CSS_SELECTOR, "#btnLogin").click()
-        with open(f"../pagefile/cookies.json", "r") as f:
+        with open(f"../webpages/cookies.json", "r") as f:
             cookies = json.load(f)
         for cookie in cookies:
             self._driver.add_cookie(cookie)
