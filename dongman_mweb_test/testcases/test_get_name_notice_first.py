@@ -12,7 +12,7 @@ class TestGetNameNoticeFirst:
     def test_get_name_notice_first(self):
         result = self.main.get_name_notice_first()
         print(result)
-        assert '咚漫五周年测试活动' in result
+        assert '5周年感恩回馈' in result
 
     def teardown(self):
         self.main.quit_page()
