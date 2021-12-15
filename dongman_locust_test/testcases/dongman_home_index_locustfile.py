@@ -99,8 +99,8 @@ class RecommendPost(FastHttpUser):
         #                                                                                            '-00163e069c9c']
         current_time = int(round(time.time() * 1000))
         now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-        message_index = "/app/home/index?v=3&onoff=Y&imei=869614030239642&serviceZone=CHINA&language=zh-hans" \
-                        "&platform=APP_ANDROID&md5=Q4cTNDwpVNaEgv4uIU5joQ&expires=1639538595"
+        message_index = "/app/home/index?v=3&onoff=Y&imei=869614030239642&serviceZone=CHINA&&language=zh-hans&" \
+                        "platform=APP_ANDROID&md5=7talNKZttjlQu9vhgogJEw&expires=1639542624"
         r_home_index = self.client.post(message_index)
         # print(cookie_name)
         # print(f'单次抽奖结果为：{r_one.text}')
