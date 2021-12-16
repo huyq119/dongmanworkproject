@@ -99,16 +99,16 @@ class RecommendPost(FastHttpUser):
         #                                                                                            '-00163e069c9c']
         current_time = int(round(time.time() * 1000))
         now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-        message_index = "/app/home/index?v=3&onoff=Y&imei=869614030239642&serviceZone=CHINA&&language=zh-hans&" \
-                        "platform=APP_ANDROID&md5=7talNKZttjlQu9vhgogJEw&expires=1639542624"
-        r_home_index = self.client.post(message_index)
+        message_index = "/app/home/index?bannerImageType=IphoneX&expires=1639555780686&" \
+                        "imei=6DBCBEAEB7B64F51A36CB17AC581E7DC&language=zh-hans&locale=zh_CN&" \
+                        "md5=XXLUJMN7l5lFRXLWpiYC-Q&newUser=Y&onOff=Y&platform=APP_IPHONE&serviceZone=CHINA&v=1"
+        r_home_index = self.client.get(message_index)
         # print(cookie_name)
         # print(f'单次抽奖结果为：{r_one.text}')
 
         print(f'测试结果为：{r_home_index.status_code}({now})')
         # print("Response status code:", r.status_code)
         assert r_home_index.status_code == 200
-        # wait_time = between(1, 10)
 
     @task
     def reporting_request_two(self):
@@ -121,14 +121,14 @@ class RecommendPost(FastHttpUser):
         message_index = "/app/home/index?bannerImageType=IphoneX&" \
                         "expires=1639471964830&imei=62F71887058F4F4C980FCF12E6334E15&language=zh-hans&locale=zh_CN&" \
                         "md5=JSQZ7n6R45BkDVpUsDmxLw&newUser=N&onOff=Y&platform=APP_IPHONE&serviceZone=CHINA&v=1"
-        r_home_index = self.client.post(message_index)
+        r_home_index = self.client.get(message_index)
         # print(cookie_name)
         # print(f'单次抽奖结果为：{r_one.text}')
 
         print(f'测试结果为：{r_home_index.status_code}({now})')
         # print("Response status code:", r.status_code)
         assert r_home_index.status_code == 200
-        # wait_time = between(1, 10)
+    wait_time = between(5, 15)
 
     # @task
     # def reporting_request_two(self):
