@@ -11,7 +11,7 @@ ja_JP
 from faker import Faker
 import pyperclip
 
-fake = Faker(['ko_KR'])
+fake = Faker(['th_TH'])
 text_loc = ''
 for i in range(5):
     text_loc = text_loc + '\n' + fake.address()
