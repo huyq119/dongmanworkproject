@@ -89,44 +89,87 @@ def get_body(neo_id):
 
 
 class RecommendPost(FastHttpUser):
-    host = "https://qaapis.dongmanmanhua.cn"
+    # host = "https://qaapis02.dongmanmanhua.cn"
+    host = "https://qaptsapis.dongmanmanhua.cn"
 
+    # @task
+    # def reporting_request_index(self):
+    #     # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
+    #     # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
+    #     #                                                                                            '-11eb-864f'
+    #     #                                                                                            '-00163e069c9c']
+    #     current_time = int(round(time.time() * 1000))
+    #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
+    #     message_index = "/app/home/index?bannerImageType=IphoneX&expires=1640588894076&" \
+    #                     "imei=62F71887058F4F4C980FCF12E6334E15&language=zh-hans&locale=zh_CN&" \
+    #                     "md5=hDqDcV13caSlYHjRME2Ukg&newUser=Y&onOff=Y&platform=APP_IPHONE&serviceZone=CHINA&v=1"
+    #     cookie_name = 'NEO_SES=LQsBo2FyKsOnmsYsf9vvbK+GkXPDYEh+03PkCjjETF1ZAXRa9+ZtTbao44wLN59ndqH/0J3H0dCY8' \
+    #                   '+xvmAvjbBwVXI6h3Y4SNIAd' \
+    #                   '0ElH1RZsj4rBLXNCDuIi4TkyMG1uHTNQg+1rn2O7SFT3DyPOphnAUiqLnZSwkTlKQ4PrFH8A/vStwuEXQqOPvhbV' \
+    #                   '/rLj6UUMGpHhFIfTkbDB' \
+    #                   'iV7D6THjDn82Ptcdz5crrMUm8x2Z4XeYIsJJttBKi+RpqL2Q3sJ5OcLGAQ' \
+    #                   '/BkO4yzZZqOalKROmP487Hsaj1IhxgbvQlrRmyTffmz+hWJQvoM4b' \
+    #                   'jw81/a2u1nuBkhKrsamPa0j1aizy5oDKMr7nAEoeSaQxneaZso1RB8gq390P2LwRjzliMTxtJ8SMDenJUkwfvYg==;uuid' \
+    #                   '=62F71887058F4F4C980FCF12E6334E15 '
+    #     headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
+    #                'Accept-Encoding': 'gzip, deflate, br',
+    #                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
+    #                              'KHTML, '
+    #                              'like Gecko) Mobile/15E148 ',
+    #                'Cookie': cookie_name}
+    #     r_home_index = self.client.get(message_index, headers=headers)
+    #     # print(cookie_name)
+    #     # print(f'单次抽奖结果为：{r_one.text}')
+    #
+    #     print(f'测试结果为：{r_home_index.status_code}({now})')
+    #     # print("Response status code:", r.status_code)
+    #     assert r_home_index.status_code == 200
+
+    # @task
+    # def reporting_request_v4(self):
+    #     current_time = int(round(time.time() * 1000))
+    #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
+    #     message_index = "/app/episode/list/v4?expires=1640588894076&language=zh-hans&" \
+    #                     "locale=zh_CN&md5=PS3B087FXX69A42Vt0ksRQ&pageSize=513&" \
+    #                     "platform=APP_IPHONE&serviceZone=CHINA&startIndex=0&titleNo=241&v=8"
+    #     cookie_name = 'NEO_SES=LQsBo2FyKsOnmsYsf9vvbK+GkXPDYEh+03PkCjjETF1ZAXRa9+ZtTbao44wLN59ndqH/' \
+    #                   '0J3H0dCY8+xvmAvjbBwVXI6h3Y4SNIAd0ElH1RZsj4rBLXNCDuIi4TkyMG1uHTNQg+1rn2O7SFT3DyP' \
+    #                   'OphnAUiqLnZSwkTlKQ4PrFH8A/vStwuEXQqOPvhbV/rLj6UUMGpHhFIfTkbDBiV7D6THjDn82Ptcdz5' \
+    #                   'crrMUm8x2Z4XeYIsJJttBKi+RpqL2Q3sJ5OcLGAQ/BkO4yzZZqOalKROmP487Hsaj1IhxgbvQlrRmyT' \
+    #                   'ffmz+hWJQvoM4bjw81/a2u1nuBkhKrsamPa0j1aizy5oDKMr7nAEoeSaQxneaZso1RB8gq390P2Lw' \
+    #                   'RjzliMTxtJ8SMDenJUkwfvYg==;uuid=62F71887058F4F4C980FCF12E6334E15'
+    #     headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
+    #                'Accept-Encoding': 'gzip, deflate, br',
+    #                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
+    #                              'KHTML, '
+    #                              'like Gecko) Mobile/15E148 ',
+    #                'Cookie': cookie_name}
+    #     r_home_index = self.client.get(message_index, headers=headers)
+    #
+    #     print(f'测试结果为：{r_home_index.status_code}({now})')
+    #     assert r_home_index.status_code == 200
+    #
     @task
-    def reporting_request_one(self):
-        # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
-        # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
-        #                                                                                            '-11eb-864f'
-        #                                                                                            '-00163e069c9c']
+    def reporting_request_recommend(self):
         current_time = int(round(time.time() * 1000))
         now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-        message_index = "/app/home/index?bannerImageType=IphoneX&expires=1639555780686&" \
-                        "imei=6DBCBEAEB7B64F51A36CB17AC581E7DC&language=zh-hans&locale=zh_CN&" \
-                        "md5=XXLUJMN7l5lFRXLWpiYC-Q&newUser=Y&onOff=Y&platform=APP_IPHONE&serviceZone=CHINA&v=1"
-        r_home_index = self.client.get(message_index)
-        # print(cookie_name)
-        # print(f'单次抽奖结果为：{r_one.text}')
+        message_index = "/app/discovery/recommend?expires=1640666715885&language=zh-hans&locale=zh_CN&" \
+                        "md5=St_58Qx5hz3puO_PBT2WJw&platform=APP_IPHONE&serviceZone=CHINA"
+        cookie_name = 'NEO_SES=LQsBo2FyKsOnmsYsf9vvbK+GkXPDYEh+03PkCjjETF1ZAXRa9+ZtTbao44wLN59ndqH/0J3H0dC' \
+                      'Y8+xvmAvjbBwVXI6h3Y4SNIAd0ElH1RZsj4rBLXNCDuIi4TkyMG1uHTNQg+1rn2O7SFT3DyPOphnAUiqLnZSwk' \
+                      'TlKQ4PrFH8A/vStwuEXQqOPvhbV/rLj6UUMGpHhFIfTkbDBiV7D6THjDn82Ptcdz5crrMUm8x2Z4XeYIsJJttBKi' \
+                      '+RpqL2Q3sJ5OcLGAQ/BkO4yzZZqOalKROmP487Hsaj1IhxgbvQlrRmyTffmz+hWJQvoM4bjw81/a2u1nuBkhKrsam' \
+                      'Pa0j1aizy5oDKMr7nAEoeSaQxneaZso1RB8gq390P2LwRjzliMTxtJ8SMDenJUkwfvYg==;uuid=62F71887058F4F4' \
+                      'C980FCF12E6334E15'
+        headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
+                   'Accept-Encoding': 'gzip, deflate, br',
+                   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
+                                 'KHTML, '
+                                 'like Gecko) Mobile/15E148 ',
+                   'Cookie': cookie_name}
+        r_home_index = self.client.get(message_index, headers=headers)
 
         print(f'测试结果为：{r_home_index.status_code}({now})')
-        # print("Response status code:", r.status_code)
-        assert r_home_index.status_code == 200
-
-    @task
-    def reporting_request_two(self):
-        # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
-        # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
-        #                                                                                            '-11eb-864f'
-        #                                                                                            '-00163e069c9c']
-        current_time = int(round(time.time() * 1000))
-        now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-        message_index = "/app/home/index?bannerImageType=IphoneX&" \
-                        "expires=1639471964830&imei=62F71887058F4F4C980FCF12E6334E15&language=zh-hans&locale=zh_CN&" \
-                        "md5=JSQZ7n6R45BkDVpUsDmxLw&newUser=N&onOff=Y&platform=APP_IPHONE&serviceZone=CHINA&v=1"
-        r_home_index = self.client.get(message_index)
-        # print(cookie_name)
-        # print(f'单次抽奖结果为：{r_one.text}')
-
-        print(f'测试结果为：{r_home_index.status_code}({now})')
-        # print("Response status code:", r.status_code)
         assert r_home_index.status_code == 200
 
     wait_time = between(5, 15)
@@ -274,37 +317,50 @@ class RecommendPost(FastHttpUser):
 #         else:
 #             return None
 
-# class StagesShape(LoadTestShape):
-#     """
-#     A simply load test shape class that has different user and spawn_rate at
-#     different stages.
-#     Keyword arguments:
-#         stages -- A list of dicts, each representing a stage with the following keys:
-#             duration -- When this many seconds pass the test is advanced to the next stage
-#             users -- Total user count
-#             spawn_rate -- Number of users to start/stop per second
-#             stop -- A boolean that can stop that test at a specific stage
-#         stop_at_end -- Can be set to stop once all stages have run.
-#     """
-#
-#     stages = [
-#         {"duration": 60, "users": 10, "spawn_rate": 10},
-#         {"duration": 100, "users": 20, "spawn_rate": 10},
-#         {"duration": 180, "users": 30, "spawn_rate": 10},
-#         {"duration": 220, "users": 40, "spawn_rate": 10},
-#         {"duration": 230, "users": 30, "spawn_rate": 10},
-#         {"duration": 240, "users": 10, "spawn_rate": 10},
-#     ]
-#
-#     def tick(self):
-#         run_time = self.get_run_time()
-#
-#         for stage in self.stages:
-#             if run_time < stage["duration"]:
-#                 tick_data = (stage["users"], stage["spawn_rate"])
-#                 return tick_data
-#
-#         return None
+class StagesShape(LoadTestShape):
+    """
+    A simply load test shape class that has different user and spawn_rate at
+    different stages.
+    Keyword arguments:
+        stages -- A list of dicts, each representing a stage with the following keys:
+            duration -- When this many seconds pass the test is advanced to the next stage
+            users -- Total user count
+            spawn_rate -- Number of users to start/stop per second
+            stop -- A boolean that can stop that test at a specific stage
+        stop_at_end -- Can be set to stop once all stages have run.
+    """
+
+    stages = [
+        {"duration": 60, "users": 100, "spawn_rate": 10},
+        {"duration": 120, "users": 200, "spawn_rate": 10},
+        {"duration": 180, "users": 300, "spawn_rate": 10},
+        {"duration": 240, "users": 400, "spawn_rate": 10},
+        {"duration": 300, "users": 500, "spawn_rate": 10},
+        {"duration": 360, "users": 600, "spawn_rate": 10},
+        {"duration": 420, "users": 700, "spawn_rate": 10},
+        {"duration": 480, "users": 800, "spawn_rate": 10},
+        {"duration": 540, "users": 900, "spawn_rate": 10},
+        {"duration": 600, "users": 1000, "spawn_rate": 10},
+        {"duration": 660, "users": 900, "spawn_rate": 10},
+        {"duration": 720, "users": 800, "spawn_rate": 10},
+        {"duration": 780, "users": 700, "spawn_rate": 10},
+        {"duration": 840, "users": 600, "spawn_rate": 10},
+        {"duration": 900, "users": 500, "spawn_rate": 10},
+        {"duration": 960, "users": 400, "spawn_rate": 10},
+        {"duration": 1020, "users": 300, "spawn_rate": 10},
+        {"duration": 1080, "users": 200, "spawn_rate": 10},
+        {"duration": 1140, "users": 100, "spawn_rate": 10},
+    ]
+
+    def tick(self):
+        run_time = self.get_run_time()
+
+        for stage in self.stages:
+            if run_time < stage["duration"]:
+                tick_data = (stage["users"], stage["spawn_rate"])
+                return tick_data
+
+        return None
 
 # class StepLoadShape(LoadTestShape):
 #     """
@@ -316,10 +372,10 @@ class RecommendPost(FastHttpUser):
 #         time_limit -- Time limit in seconds
 #     """
 #
-#     step_time = 3
-#     step_load = 5
-#     spawn_rate = 5
-#     time_limit = 60
+#     step_time = 5
+#     step_load = 50
+#     spawn_rate = 50
+#     time_limit = 100
 #
 #     def tick(self):
 #         run_time = self.get_run_time()
