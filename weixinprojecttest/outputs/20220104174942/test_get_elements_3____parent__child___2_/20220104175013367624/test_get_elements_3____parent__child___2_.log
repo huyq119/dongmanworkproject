@@ -1,0 +1,68 @@
+DEBUG 2022-01-04 17:50:13,368 minitest.py _miniSetUp      286 =========Current case：test_get_elements_3____parent__child___2_=========
+INFO  2022-01-04 17:50:13,369 app.py     relaunch        306 ReLaunch: /pages/index/index
+DEBUG 2022-01-04 17:50:13,369 connection.py send            183 SEND > {"id":"ab41e83c-1236-46a3-aebf-12f6760cbed7","method":"App.callWxMethod","params":{"method":"reLaunch","args":[{"url":"/pages/index/index"}]}}
+DEBUG 2022-01-04 17:50:13,455 connection.py _on_message     232 RECV < {"id":"ab41e83c-1236-46a3-aebf-12f6760cbed7","result":{"result":{"errMsg":"reLaunch:ok"}}}
+DEBUG 2022-01-04 17:50:13,788 connection.py _on_message     232 RECV < {"method":"App.bindingCalled","params":{"name":"onAppRouteDone","args":[{"webviewId":8,"path":"pages/index/index","query":{},"openType":"reLaunch"},1641289813727]}}
+INFO  2022-01-04 17:50:13,789 app.py     _on_route_changed 451 Route changed, {'name': 'onAppRouteDone', 'args': [{'webviewId': 8, 'path': 'pages/index/index', 'query': {}, 'openType': 'reLaunch'}, 1641289813727]}
+INFO  2022-01-04 17:50:13,789 minitest.py capture         548 capture setup.png
+DEBUG 2022-01-04 17:50:13,790 connection.py send            183 SEND > {"id":"67d1ccc7-1351-47f8-ad7e-06f8dc0cad52","method":"App.captureScreenshot","params":{}}
+DEBUG 2022-01-04 17:50:13,944 connection.py _on_message     230 RECV < {"id":"67d1ccc7-1351-47f8-ad7e-06f8dc0cad52","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAwwAAAXiCAIAAAA+g/jkAAABKGlDQ1BTa2lhAAAokX2RO0gDQRCGP4ONjyJgRAuLK9P4SFDDgRZeTILYJQrR7nI5gpjE43KifVpbe2s7tRXr9IKVrb0giF38NynuQOIss/PtP/uaXUgtI0ulodONwmrFseonpxYJc71ewGSbgu8308Pr6j/zJtlM0+95ip/yKNTh2rIpzrTGfG24MeYbw+FRtSi+E2dbCW4k+CoKIvHAzPeC0PC7eKfTvvTiezPvd49rinX5ChUu1Fq08VmnxjlnuCKbIjlKFCjjsMn+KObYkrahnK1xibyiM/Ky2GQL6m324vfsZ2C3NxwOn2PtUC//8AOzL7GWfYT0LQyeAjd0R9K0+STfga9FXfseFj5gri91yaTjtfFfTKjV+lOrxQFdPNZEeVWUY/sXms...
+INFO  2022-01-04 17:50:13,945 page.py    _get_elements_by_css 445 try to get elements: page
+DEBUG 2022-01-04 17:50:13,946 connection.py send            183 SEND > {"id":"2565d1af-10d1-4243-9c1f-884b668e3c07","method":"Page.getElements","params":{"selector":"page","pageId":4}}
+DEBUG 2022-01-04 17:50:13,960 connection.py _on_message     232 RECV < {"id":"2565d1af-10d1-4243-9c1f-884b668e3c07","error":{"message":"page destroyed"}}
+DEBUG 2022-01-04 17:50:14,792 minitest.py _miniTearDown   512 =========Current case Down：test_get_elements_3____parent__child___2_=========
+INFO  2022-01-04 17:50:14,793 minitest.py capture         548 capture teardown.png
+DEBUG 2022-01-04 17:50:14,793 connection.py send            183 SEND > {"id":"b6a48f02-6a9c-4ba3-b7fe-321344fd7401","method":"App.captureScreenshot","params":{}}
+DEBUG 2022-01-04 17:50:14,907 connection.py _on_message     230 RECV < {"id":"b6a48f02-6a9c-4ba3-b7fe-321344fd7401","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAwwAAAXiCAIAAAA+g/jkAAABKGlDQ1BTa2lhAAAokX2RO0gDQRCGP4ONjyJgRAuLK9P4SFDDgRZeTILYJQrR7nI5gpjE43KifVpbe2s7tRXr9IKVrb0giF38NynuQOIss/PtP/uaXUgtI0ulodONwmrFseonpxYJc71ewGSbgu8308Pr6j/zJtlM0+95ip/yKNTh2rIpzrTGfG24MeYbw+FRtSi+E2dbCW4k+CoKIvHAzPeC0PC7eKfTvvTiezPvd49rinX5ChUu1Fq08VmnxjlnuCKbIjlKFCjjsMn+KObYkrahnK1xibyiM/Ky2GQL6m324vfsZ2C3NxwOn2PtUC//8AOzL7GWfYT0LQyeAjd0R9K0+STfga9FXfseFj5gri91yaTjtfFfTKjV+lOrxQFdPNZEeVWUY/sXms...
+DEBUG 2022-01-04 17:50:14,909 connection.py send            183 SEND > {"id":"b67d4d63-52ea-4e56-850c-caf1630b23cd","method":"Page.getData","params":{"pageId":4}}
+DEBUG 2022-01-04 17:50:14,917 connection.py _on_message     232 RECV < {"id":"b67d4d63-52ea-4e56-850c-caf1630b23cd","error":{"message":"page destroyed"}}
+ERROR 2022-01-04 17:50:19,923 minitest.py _miniTearDown   524 page destroyed
+Traceback (most recent call last):
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/framework/minitest.py", line 522, in _miniTearDown
+    self.results["page_data"] = self.page.data
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py", line 55, in data
+    return self._send("Page.getData").result.data
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py", line 383, in _send
+    return self.connection.send(method, params)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py", line 185, in send
+    return self._receive_response(cmd)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py", line 206, in _receive_response
+    raise MiniAppError(err_msg)
+minium.framework.exception.MiniAppError: page destroyed
+ERROR 2022-01-04 17:50:19,924 assertbase.py _teardown_collect 266 <bound method TestElement.test_get_elements of <test.third_test.TestElement testMethod=test_get_elements_3____parent__child___2_>>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/framework/libs/unittest/case.py", line 80, in run
+    self._callTestMethod(testMethod)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/ddt.py", line 191, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/weixinprojecttest/test/third_test.py", line 19, in test_get_elements
+    page = self.page.get_element("page")
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py", line 135, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py", line 205, in get_element
+    r = self.get_elements(
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py", line 135, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py", line 279, in get_elements
+    return self._get_elements_by_css(selector, max_timeout, index=index)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py", line 448, in _get_elements_by_css
+    els = search_elements(_selector_list)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/utils/utils.py", line 28, in wrapper
+    r = func(*args, **kwargs)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py", line 441, in search_elements
+    return self.__search_child(
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py", line 407, in __search_child
+    els = self.__get_elements(_selector)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py", line 387, in __get_elements
+    ret = self._send("Page.getElements", {"selector": selector})
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py", line 383, in _send
+    return self.connection.send(method, params)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py", line 185, in send
+    return self._receive_response(cmd)
+  File "/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py", line 206, in _receive_response
+    raise MiniAppError(err_msg)
+minium.framework.exception.MiniAppError: page destroyed

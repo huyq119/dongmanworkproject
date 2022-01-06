@@ -1,0 +1,1586 @@
+{
+    "version": 2,
+    "task_datas": [
+        {
+            "case_datas": [
+                {
+                    "case_name": "test_get_elements_1____testclass___2_",
+                    "run_time": "20220104 18:17:37",
+                    "test_type": "TestElement",
+                    "case_doc": null,
+                    "success": false,
+                    "failures": "",
+                    "errors": "Traceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 59, in testPartExecutor\n    yield\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/framework/libs/unittest/case.py\", line 80, in run\n    self._callTestMethod(testMethod)\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 549, in _callTestMethod\n    method()\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/weixinprojecttest/test/third_test.py\", line 19, in test_get_elements\n    page = self.page.get_element(\"page\")\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 205, in get_element\n    r = self.get_elements(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 279, in get_elements\n    return self._get_elements_by_css(selector, max_timeout, index=index)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 448, in _get_elements_by_css\n    els = search_elements(_selector_list)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/utils/utils.py\", line 28, in wrapper\n    r = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 441, in search_elements\n    return self.__search_child(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 407, in __search_child\n    els = self.__get_elements(_selector)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 387, in __get_elements\n    ret = self._send(\"Page.getElements\", {\"selector\": selector})\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 383, in _send\n    return self.connection.send(method, params)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 185, in send\n    return self._receive_response(cmd)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 206, in _receive_response\n    raise MiniAppError(err_msg)\nminium.framework.exception.MiniAppError: page destroyed\n",
+                    "start_timestamp": 1641291457.9083881,
+                    "is_failure": false,
+                    "is_error": true,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.third_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_get_elements_1____testclass___2_.log",
+                    "error_type": "MiniAppError",
+                    "error_value": "page destroyed",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641291458,
+                            "datetime": "2022-01-04 18:17:38"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641291460,
+                            "datetime": "2022-01-04 18:17:40"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": null,
+                    "stop_timestamp": 1641291461.540805,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    @minium.ddt_case(\n",
+                            "        (\".testclass\", 2),\n",
+                            "        (\".child\", 3),\n",
+                            "        (\".parent .child\", 2),\n",
+                            "        (\".componentclass>>>.componentclass\", 3),\n",
+                            "    )\n",
+                            "    def test_get_elements(self, args):\n",
+                            "        [selector, number] = args\n",
+                            "        page = self.page.get_element(\"page\")\n",
+                            "        elements = page.get_elements(selector, max_timeout=5)\n",
+                            "        self.assertEqual(number, len(elements))\n"
+                        ],
+                        "start": 11
+                    },
+                    "filename": "test_get_elements_1____testclass___2_.json",
+                    "relative": "20220104181715/test_get_elements_1____testclass___2_/20220104181737907574",
+                    "costs": "3.632\u79d2"
+                },
+                {
+                    "case_name": "test_get_elements_2____child___3_",
+                    "run_time": "20220104 18:17:41",
+                    "test_type": "TestElement",
+                    "case_doc": null,
+                    "success": false,
+                    "failures": "",
+                    "errors": "Traceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 59, in testPartExecutor\n    yield\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/framework/libs/unittest/case.py\", line 80, in run\n    self._callTestMethod(testMethod)\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 549, in _callTestMethod\n    method()\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/weixinprojecttest/test/third_test.py\", line 19, in test_get_elements\n    page = self.page.get_element(\"page\")\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 205, in get_element\n    r = self.get_elements(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 279, in get_elements\n    return self._get_elements_by_css(selector, max_timeout, index=index)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 448, in _get_elements_by_css\n    els = search_elements(_selector_list)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/utils/utils.py\", line 28, in wrapper\n    r = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 441, in search_elements\n    return self.__search_child(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 407, in __search_child\n    els = self.__get_elements(_selector)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 387, in __get_elements\n    ret = self._send(\"Page.getElements\", {\"selector\": selector})\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 383, in _send\n    return self.connection.send(method, params)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 185, in send\n    return self._receive_response(cmd)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 206, in _receive_response\n    raise MiniAppError(err_msg)\nminium.framework.exception.MiniAppError: page destroyed\n",
+                    "start_timestamp": 1641291461.547323,
+                    "is_failure": false,
+                    "is_error": true,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.third_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_get_elements_2____child___3_.log",
+                    "error_type": "MiniAppError",
+                    "error_value": "page destroyed",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641291462,
+                            "datetime": "2022-01-04 18:17:42"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641291462,
+                            "datetime": "2022-01-04 18:17:42"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": null,
+                    "stop_timestamp": 1641291463.4413939,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    @minium.ddt_case(\n",
+                            "        (\".testclass\", 2),\n",
+                            "        (\".child\", 3),\n",
+                            "        (\".parent .child\", 2),\n",
+                            "        (\".componentclass>>>.componentclass\", 3),\n",
+                            "    )\n",
+                            "    def test_get_elements(self, args):\n",
+                            "        [selector, number] = args\n",
+                            "        page = self.page.get_element(\"page\")\n",
+                            "        elements = page.get_elements(selector, max_timeout=5)\n",
+                            "        self.assertEqual(number, len(elements))\n"
+                        ],
+                        "start": 11
+                    },
+                    "filename": "test_get_elements_2____child___3_.json",
+                    "relative": "20220104181715/test_get_elements_2____child___3_/20220104181741546971",
+                    "costs": "1.894\u79d2"
+                },
+                {
+                    "case_name": "test_get_elements_3____parent__child___2_",
+                    "run_time": "20220104 18:17:43",
+                    "test_type": "TestElement",
+                    "case_doc": null,
+                    "success": false,
+                    "failures": "",
+                    "errors": "Traceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 59, in testPartExecutor\n    yield\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/framework/libs/unittest/case.py\", line 80, in run\n    self._callTestMethod(testMethod)\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 549, in _callTestMethod\n    method()\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/weixinprojecttest/test/third_test.py\", line 19, in test_get_elements\n    page = self.page.get_element(\"page\")\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 205, in get_element\n    r = self.get_elements(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 279, in get_elements\n    return self._get_elements_by_css(selector, max_timeout, index=index)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 448, in _get_elements_by_css\n    els = search_elements(_selector_list)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/utils/utils.py\", line 28, in wrapper\n    r = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 441, in search_elements\n    return self.__search_child(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 407, in __search_child\n    els = self.__get_elements(_selector)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 387, in __get_elements\n    ret = self._send(\"Page.getElements\", {\"selector\": selector})\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 383, in _send\n    return self.connection.send(method, params)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 185, in send\n    return self._receive_response(cmd)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 206, in _receive_response\n    raise MiniAppError(err_msg)\nminium.framework.exception.MiniAppError: page destroyed\n",
+                    "start_timestamp": 1641291463.444758,
+                    "is_failure": false,
+                    "is_error": true,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.third_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_get_elements_3____parent__child___2_.log",
+                    "error_type": "MiniAppError",
+                    "error_value": "page destroyed",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641291463,
+                            "datetime": "2022-01-04 18:17:43"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641291464,
+                            "datetime": "2022-01-04 18:17:44"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": null,
+                    "stop_timestamp": 1641291465.2556539,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    @minium.ddt_case(\n",
+                            "        (\".testclass\", 2),\n",
+                            "        (\".child\", 3),\n",
+                            "        (\".parent .child\", 2),\n",
+                            "        (\".componentclass>>>.componentclass\", 3),\n",
+                            "    )\n",
+                            "    def test_get_elements(self, args):\n",
+                            "        [selector, number] = args\n",
+                            "        page = self.page.get_element(\"page\")\n",
+                            "        elements = page.get_elements(selector, max_timeout=5)\n",
+                            "        self.assertEqual(number, len(elements))\n"
+                        ],
+                        "start": 11
+                    },
+                    "filename": "test_get_elements_3____parent__child___2_.json",
+                    "relative": "20220104181715/test_get_elements_3____parent__child___2_/20220104181743444380",
+                    "costs": "1.811\u79d2"
+                },
+                {
+                    "case_name": "test_get_elements_4____componentclass____componentclass___3_",
+                    "run_time": "20220104 18:17:45",
+                    "test_type": "TestElement",
+                    "case_doc": null,
+                    "success": false,
+                    "failures": "",
+                    "errors": "Traceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 59, in testPartExecutor\n    yield\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/framework/libs/unittest/case.py\", line 80, in run\n    self._callTestMethod(testMethod)\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 549, in _callTestMethod\n    method()\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/weixinprojecttest/test/third_test.py\", line 19, in test_get_elements\n    page = self.page.get_element(\"page\")\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 205, in get_element\n    r = self.get_elements(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 279, in get_elements\n    return self._get_elements_by_css(selector, max_timeout, index=index)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 448, in _get_elements_by_css\n    els = search_elements(_selector_list)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/utils/utils.py\", line 28, in wrapper\n    r = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 441, in search_elements\n    return self.__search_child(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 407, in __search_child\n    els = self.__get_elements(_selector)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 387, in __get_elements\n    ret = self._send(\"Page.getElements\", {\"selector\": selector})\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 383, in _send\n    return self.connection.send(method, params)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 185, in send\n    return self._receive_response(cmd)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 206, in _receive_response\n    raise MiniAppError(err_msg)\nminium.framework.exception.MiniAppError: page destroyed\n",
+                    "start_timestamp": 1641291465.259119,
+                    "is_failure": false,
+                    "is_error": true,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.third_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_get_elements_4____componentclass____componentclass___3_.log",
+                    "error_type": "MiniAppError",
+                    "error_value": "page destroyed",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641291465,
+                            "datetime": "2022-01-04 18:17:45"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641291466,
+                            "datetime": "2022-01-04 18:17:46"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": null,
+                    "stop_timestamp": 1641291467.119634,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    @minium.ddt_case(\n",
+                            "        (\".testclass\", 2),\n",
+                            "        (\".child\", 3),\n",
+                            "        (\".parent .child\", 2),\n",
+                            "        (\".componentclass>>>.componentclass\", 3),\n",
+                            "    )\n",
+                            "    def test_get_elements(self, args):\n",
+                            "        [selector, number] = args\n",
+                            "        page = self.page.get_element(\"page\")\n",
+                            "        elements = page.get_elements(selector, max_timeout=5)\n",
+                            "        self.assertEqual(number, len(elements))\n"
+                        ],
+                        "start": 11
+                    },
+                    "filename": "test_get_elements_4____componentclass____componentclass___3_.json",
+                    "relative": "20220104181715/test_get_elements_4____componentclass____componentclass___3_/20220104181745258710",
+                    "costs": "1.861\u79d2"
+                }
+            ],
+            "summary": {
+                "case_num": 4,
+                "success": 0,
+                "failed": 0,
+                "error": 4,
+                "costs": "9.211\u79d2",
+                "start_time": "2022/01/04 18:17:37",
+                "end_time": "2022/01/04 18:17:47",
+                "detail": [
+                    {
+                        "name": "test",
+                        "case_num": 4,
+                        "success": 0,
+                        "failed": 0,
+                        "error": 4,
+                        "start_time": "2022/01/04 18:17:37",
+                        "end_time": "2022/01/04 18:17:47",
+                        "costs": "9.211\u79d2"
+                    }
+                ]
+            }
+        },
+        {
+            "case_datas": [
+                {
+                    "case_name": "test_get_elements_1____testclass___2_",
+                    "run_time": "20220104 17:50:05",
+                    "test_type": "TestElement",
+                    "case_doc": null,
+                    "success": false,
+                    "failures": "",
+                    "errors": "Traceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 59, in testPartExecutor\n    yield\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/framework/libs/unittest/case.py\", line 80, in run\n    self._callTestMethod(testMethod)\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 549, in _callTestMethod\n    method()\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/weixinprojecttest/test/third_test.py\", line 19, in test_get_elements\n    page = self.page.get_element(\"page\")\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 205, in get_element\n    r = self.get_elements(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 279, in get_elements\n    return self._get_elements_by_css(selector, max_timeout, index=index)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 448, in _get_elements_by_css\n    els = search_elements(_selector_list)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/utils/utils.py\", line 28, in wrapper\n    r = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 441, in search_elements\n    return self.__search_child(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 407, in __search_child\n    els = self.__get_elements(_selector)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 387, in __get_elements\n    ret = self._send(\"Page.getElements\", {\"selector\": selector})\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 383, in _send\n    return self.connection.send(method, params)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 185, in send\n    return self._receive_response(cmd)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 206, in _receive_response\n    raise MiniAppError(err_msg)\nminium.framework.exception.MiniAppError: page destroyed\n",
+                    "start_timestamp": 1641289805.637492,
+                    "is_failure": false,
+                    "is_error": true,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.third_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_get_elements_1____testclass___2_.log",
+                    "error_type": "MiniAppError",
+                    "error_value": "page destroyed",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641289806,
+                            "datetime": "2022-01-04 17:50:06"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641289807,
+                            "datetime": "2022-01-04 17:50:07"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": null,
+                    "stop_timestamp": 1641289808.1452851,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    @minium.ddt_case(\n",
+                            "        (\".testclass\", 2),\n",
+                            "        (\".child\", 3),\n",
+                            "        (\".parent .child\", 2),\n",
+                            "        (\".componentclass>>>.componentclass\", 3),\n",
+                            "    )\n",
+                            "    def test_get_elements(self, args):\n",
+                            "        [selector, number] = args\n",
+                            "        page = self.page.get_element(\"page\")\n",
+                            "        elements = page.get_elements(selector, max_timeout=5)\n",
+                            "        self.assertEqual(number, len(elements))\n"
+                        ],
+                        "start": 11
+                    },
+                    "filename": "test_get_elements_1____testclass___2_.json",
+                    "relative": "20220104174942/test_get_elements_1____testclass___2_/20220104175005635390",
+                    "costs": "2.508\u79d2"
+                },
+                {
+                    "case_name": "test_get_elements_2____child___3_",
+                    "run_time": "20220104 17:50:08",
+                    "test_type": "TestElement",
+                    "case_doc": null,
+                    "success": false,
+                    "failures": "",
+                    "errors": "Traceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 59, in testPartExecutor\n    yield\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/framework/libs/unittest/case.py\", line 80, in run\n    self._callTestMethod(testMethod)\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 549, in _callTestMethod\n    method()\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/weixinprojecttest/test/third_test.py\", line 19, in test_get_elements\n    page = self.page.get_element(\"page\")\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 205, in get_element\n    r = self.get_elements(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 279, in get_elements\n    return self._get_elements_by_css(selector, max_timeout, index=index)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 448, in _get_elements_by_css\n    els = search_elements(_selector_list)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/utils/utils.py\", line 28, in wrapper\n    r = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 441, in search_elements\n    return self.__search_child(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 407, in __search_child\n    els = self.__get_elements(_selector)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 387, in __get_elements\n    ret = self._send(\"Page.getElements\", {\"selector\": selector})\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 383, in _send\n    return self.connection.send(method, params)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 185, in send\n    return self._receive_response(cmd)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 206, in _receive_response\n    raise MiniAppError(err_msg)\nminium.framework.exception.MiniAppError: page destroyed\n",
+                    "start_timestamp": 1641289808.153721,
+                    "is_failure": false,
+                    "is_error": true,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.third_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_get_elements_2____child___3_.log",
+                    "error_type": "MiniAppError",
+                    "error_value": "page destroyed",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641289808,
+                            "datetime": "2022-01-04 17:50:08"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641289812,
+                            "datetime": "2022-01-04 17:50:12"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": null,
+                    "stop_timestamp": 1641289813.3639722,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    @minium.ddt_case(\n",
+                            "        (\".testclass\", 2),\n",
+                            "        (\".child\", 3),\n",
+                            "        (\".parent .child\", 2),\n",
+                            "        (\".componentclass>>>.componentclass\", 3),\n",
+                            "    )\n",
+                            "    def test_get_elements(self, args):\n",
+                            "        [selector, number] = args\n",
+                            "        page = self.page.get_element(\"page\")\n",
+                            "        elements = page.get_elements(selector, max_timeout=5)\n",
+                            "        self.assertEqual(number, len(elements))\n"
+                        ],
+                        "start": 11
+                    },
+                    "filename": "test_get_elements_2____child___3_.json",
+                    "relative": "20220104174942/test_get_elements_2____child___3_/20220104175008152669",
+                    "costs": "5.210\u79d2"
+                },
+                {
+                    "case_name": "test_get_elements_3____parent__child___2_",
+                    "run_time": "20220104 17:50:13",
+                    "test_type": "TestElement",
+                    "case_doc": null,
+                    "success": false,
+                    "failures": "",
+                    "errors": "Traceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 59, in testPartExecutor\n    yield\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/framework/libs/unittest/case.py\", line 80, in run\n    self._callTestMethod(testMethod)\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 549, in _callTestMethod\n    method()\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/weixinprojecttest/test/third_test.py\", line 19, in test_get_elements\n    page = self.page.get_element(\"page\")\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 205, in get_element\n    r = self.get_elements(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 279, in get_elements\n    return self._get_elements_by_css(selector, max_timeout, index=index)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 448, in _get_elements_by_css\n    els = search_elements(_selector_list)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/utils/utils.py\", line 28, in wrapper\n    r = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 441, in search_elements\n    return self.__search_child(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 407, in __search_child\n    els = self.__get_elements(_selector)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 387, in __get_elements\n    ret = self._send(\"Page.getElements\", {\"selector\": selector})\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 383, in _send\n    return self.connection.send(method, params)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 185, in send\n    return self._receive_response(cmd)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 206, in _receive_response\n    raise MiniAppError(err_msg)\nminium.framework.exception.MiniAppError: page destroyed\n",
+                    "start_timestamp": 1641289813.368465,
+                    "is_failure": false,
+                    "is_error": true,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.third_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_get_elements_3____parent__child___2_.log",
+                    "error_type": "MiniAppError",
+                    "error_value": "page destroyed",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641289813,
+                            "datetime": "2022-01-04 17:50:13"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641289814,
+                            "datetime": "2022-01-04 17:50:14"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": null,
+                    "stop_timestamp": 1641289819.9239528,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    @minium.ddt_case(\n",
+                            "        (\".testclass\", 2),\n",
+                            "        (\".child\", 3),\n",
+                            "        (\".parent .child\", 2),\n",
+                            "        (\".componentclass>>>.componentclass\", 3),\n",
+                            "    )\n",
+                            "    def test_get_elements(self, args):\n",
+                            "        [selector, number] = args\n",
+                            "        page = self.page.get_element(\"page\")\n",
+                            "        elements = page.get_elements(selector, max_timeout=5)\n",
+                            "        self.assertEqual(number, len(elements))\n"
+                        ],
+                        "start": 11
+                    },
+                    "filename": "test_get_elements_3____parent__child___2_.json",
+                    "relative": "20220104174942/test_get_elements_3____parent__child___2_/20220104175013367624",
+                    "costs": "6.555\u79d2"
+                },
+                {
+                    "case_name": "test_get_elements_4____componentclass____componentclass___3_",
+                    "run_time": "20220104 17:50:19",
+                    "test_type": "TestElement",
+                    "case_doc": null,
+                    "success": false,
+                    "failures": "",
+                    "errors": "Traceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 59, in testPartExecutor\n    yield\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/framework/libs/unittest/case.py\", line 80, in run\n    self._callTestMethod(testMethod)\n  File \"/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py\", line 549, in _callTestMethod\n    method()\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/weixinprojecttest/test/third_test.py\", line 19, in test_get_elements\n    page = self.page.get_element(\"page\")\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 205, in get_element\n    r = self.get_elements(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/minium_log.py\", line 135, in wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 279, in get_elements\n    return self._get_elements_by_css(selector, max_timeout, index=index)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 448, in _get_elements_by_css\n    els = search_elements(_selector_list)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/utils/utils.py\", line 28, in wrapper\n    r = func(*args, **kwargs)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 441, in search_elements\n    return self.__search_child(\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 407, in __search_child\n    els = self.__get_elements(_selector)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 387, in __get_elements\n    ret = self._send(\"Page.getElements\", {\"selector\": selector})\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/page.py\", line 383, in _send\n    return self.connection.send(method, params)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 185, in send\n    return self._receive_response(cmd)\n  File \"/Users/dongman/PycharmProjects/dongmanworkproject/venv/lib/python3.10/site-packages/minium/miniprogram/base_driver/connection.py\", line 206, in _receive_response\n    raise MiniAppError(err_msg)\nminium.framework.exception.MiniAppError: page destroyed\n",
+                    "start_timestamp": 1641289819.9275131,
+                    "is_failure": false,
+                    "is_error": true,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.third_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_get_elements_4____componentclass____componentclass___3_.log",
+                    "error_type": "MiniAppError",
+                    "error_value": "page destroyed",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641289820,
+                            "datetime": "2022-01-04 17:50:20"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641289823,
+                            "datetime": "2022-01-04 17:50:23"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": null,
+                    "stop_timestamp": 1641289824.236895,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    @minium.ddt_case(\n",
+                            "        (\".testclass\", 2),\n",
+                            "        (\".child\", 3),\n",
+                            "        (\".parent .child\", 2),\n",
+                            "        (\".componentclass>>>.componentclass\", 3),\n",
+                            "    )\n",
+                            "    def test_get_elements(self, args):\n",
+                            "        [selector, number] = args\n",
+                            "        page = self.page.get_element(\"page\")\n",
+                            "        elements = page.get_elements(selector, max_timeout=5)\n",
+                            "        self.assertEqual(number, len(elements))\n"
+                        ],
+                        "start": 11
+                    },
+                    "filename": "test_get_elements_4____componentclass____componentclass___3_.json",
+                    "relative": "20220104174942/test_get_elements_4____componentclass____componentclass___3_/20220104175019926890",
+                    "costs": "4.309\u79d2"
+                }
+            ],
+            "summary": {
+                "case_num": 4,
+                "success": 0,
+                "failed": 0,
+                "error": 4,
+                "costs": "18.599\u79d2",
+                "start_time": "2022/01/04 17:50:05",
+                "end_time": "2022/01/04 17:50:24",
+                "detail": [
+                    {
+                        "name": "test",
+                        "case_num": 4,
+                        "success": 0,
+                        "failed": 0,
+                        "error": 4,
+                        "start_time": "2022/01/04 17:50:05",
+                        "end_time": "2022/01/04 17:50:24",
+                        "costs": "18.599\u79d2"
+                    }
+                ]
+            }
+        },
+        {
+            "case_datas": [
+                {
+                    "case_name": "test_screen_shot",
+                    "run_time": "20220104 16:21:47",
+                    "test_type": "AppTest",
+                    "case_doc": null,
+                    "success": true,
+                    "failures": "",
+                    "errors": "",
+                    "start_timestamp": 1641284507.261981,
+                    "is_failure": false,
+                    "is_error": false,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.second_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_screen_shot.log",
+                    "error_type": "",
+                    "error_value": "",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641284508,
+                            "datetime": "2022-01-04 16:21:48"
+                        },
+                        {
+                            "name": "assertTrue-success",
+                            "url": "/pages/index/index",
+                            "path": "images/assertTrue-success.png",
+                            "ts": 1641284508,
+                            "datetime": "2022-01-04 16:21:48"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641284509,
+                            "datetime": "2022-01-04 16:21:49"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [
+                        {
+                            "name": "assertTrue",
+                            "ret": true,
+                            "msg": null,
+                            "img": null
+                        }
+                    ],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": {
+                        "bgPic": null,
+                        "picChoosed": false
+                    },
+                    "stop_timestamp": 1641284509.166723,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    def test_screen_shot(self):\n",
+                            "        output_path = os.path.join(os.path.dirname(__file__), \"outputs/test_screen_shot.png\")\n",
+                            "        if not os.path.isdir(os.path.dirname(output_path)):\n",
+                            "            os.mkdir(os.path.dirname(output_path))\n",
+                            "        if os.path.isfile(output_path):\n",
+                            "            os.remove(output_path)\n",
+                            "        ret = self.app.screen_shot(output_path)\n",
+                            "        self.assertTrue(os.path.isfile(output_path))\n",
+                            "        os.remove(output_path)\n"
+                        ],
+                        "start": 6
+                    },
+                    "filename": "test_screen_shot.json",
+                    "relative": "20220104162125/test_screen_shot/20220104162147261175",
+                    "costs": "1.905\u79d2"
+                }
+            ],
+            "summary": {
+                "case_num": 1,
+                "success": 1,
+                "failed": 0,
+                "error": 0,
+                "costs": "1.905\u79d2",
+                "start_time": "2022/01/04 16:21:47",
+                "end_time": "2022/01/04 16:21:49",
+                "detail": [
+                    {
+                        "name": "test",
+                        "case_num": 1,
+                        "success": 1,
+                        "failed": 0,
+                        "error": 0,
+                        "start_time": "2022/01/04 16:21:47",
+                        "end_time": "2022/01/04 16:21:49",
+                        "costs": "1.905\u79d2"
+                    }
+                ]
+            }
+        },
+        {
+            "case_datas": [
+                {
+                    "case_name": "test_screen_shot",
+                    "run_time": "20220104 16:20:43",
+                    "test_type": "AppTest",
+                    "case_doc": null,
+                    "success": true,
+                    "failures": "",
+                    "errors": "",
+                    "start_timestamp": 1641284443.641796,
+                    "is_failure": false,
+                    "is_error": false,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.second_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_screen_shot.log",
+                    "error_type": "",
+                    "error_value": "",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641284444,
+                            "datetime": "2022-01-04 16:20:44"
+                        },
+                        {
+                            "name": "assertTrue-success",
+                            "url": "/pages/index/index",
+                            "path": "images/assertTrue-success.png",
+                            "ts": 1641284444,
+                            "datetime": "2022-01-04 16:20:44"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641284445,
+                            "datetime": "2022-01-04 16:20:45"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [
+                        {
+                            "name": "assertTrue",
+                            "ret": true,
+                            "msg": null,
+                            "img": null
+                        }
+                    ],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": {
+                        "bgPic": null,
+                        "picChoosed": false
+                    },
+                    "stop_timestamp": 1641284445.080124,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    def test_screen_shot(self):\n",
+                            "        output_path = os.path.join(os.path.dirname(__file__), \"outputs/test_screen_shot.png\")\n",
+                            "        if not os.path.isdir(os.path.dirname(output_path)):\n",
+                            "            os.mkdir(os.path.dirname(output_path))\n",
+                            "        if os.path.isfile(output_path):\n",
+                            "            os.remove(output_path)\n",
+                            "        ret = self.app.screen_shot(output_path)\n",
+                            "        self.assertTrue(os.path.isfile(output_path))\n",
+                            "        os.remove(output_path)\n"
+                        ],
+                        "start": 6
+                    },
+                    "filename": "test_screen_shot.json",
+                    "relative": "20220104162020/test_screen_shot/20220104162043640996",
+                    "costs": "1.438\u79d2"
+                }
+            ],
+            "summary": {
+                "case_num": 1,
+                "success": 1,
+                "failed": 0,
+                "error": 0,
+                "costs": "1.438\u79d2",
+                "start_time": "2022/01/04 16:20:43",
+                "end_time": "2022/01/04 16:20:45",
+                "detail": [
+                    {
+                        "name": "test",
+                        "case_num": 1,
+                        "success": 1,
+                        "failed": 0,
+                        "error": 0,
+                        "start_time": "2022/01/04 16:20:43",
+                        "end_time": "2022/01/04 16:20:45",
+                        "costs": "1.438\u79d2"
+                    }
+                ]
+            }
+        },
+        {
+            "case_datas": [
+                {
+                    "case_name": "test_screen_shot",
+                    "run_time": "20220104 16:19:14",
+                    "test_type": "AppTest",
+                    "case_doc": null,
+                    "success": true,
+                    "failures": "",
+                    "errors": "",
+                    "start_timestamp": 1641284354.859814,
+                    "is_failure": false,
+                    "is_error": false,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.second_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_screen_shot.log",
+                    "error_type": "",
+                    "error_value": "",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641284356,
+                            "datetime": "2022-01-04 16:19:16"
+                        },
+                        {
+                            "name": "assertTrue-success",
+                            "url": "/pages/index/index",
+                            "path": "images/assertTrue-success.png",
+                            "ts": 1641284357,
+                            "datetime": "2022-01-04 16:19:17"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641284357,
+                            "datetime": "2022-01-04 16:19:17"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [
+                        {
+                            "name": "assertTrue",
+                            "ret": true,
+                            "msg": null,
+                            "img": null
+                        }
+                    ],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": {
+                        "bgPic": null,
+                        "picChoosed": false
+                    },
+                    "stop_timestamp": 1641284357.50772,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    def test_screen_shot(self):\n",
+                            "        output_path = os.path.join(os.path.dirname(__file__), \"outputs/test_screen_shot.png\")\n",
+                            "        if not os.path.isdir(os.path.dirname(output_path)):\n",
+                            "            os.mkdir(os.path.dirname(output_path))\n",
+                            "        if os.path.isfile(output_path):\n",
+                            "            os.remove(output_path)\n",
+                            "        ret = self.app.screen_shot(output_path)\n",
+                            "        self.assertTrue(os.path.isfile(output_path))\n",
+                            "        # os.remove(output_path)\n"
+                        ],
+                        "start": 6
+                    },
+                    "filename": "test_screen_shot.json",
+                    "relative": "20220104161851/test_screen_shot/20220104161914859049",
+                    "costs": "2.648\u79d2"
+                }
+            ],
+            "summary": {
+                "case_num": 1,
+                "success": 1,
+                "failed": 0,
+                "error": 0,
+                "costs": "2.648\u79d2",
+                "start_time": "2022/01/04 16:19:14",
+                "end_time": "2022/01/04 16:19:17",
+                "detail": [
+                    {
+                        "name": "test",
+                        "case_num": 1,
+                        "success": 1,
+                        "failed": 0,
+                        "error": 0,
+                        "start_time": "2022/01/04 16:19:14",
+                        "end_time": "2022/01/04 16:19:17",
+                        "costs": "2.648\u79d2"
+                    }
+                ]
+            }
+        },
+        {
+            "case_datas": [
+                {
+                    "case_name": "test_screen_shot",
+                    "run_time": "20220104 16:11:42",
+                    "test_type": "AppTest",
+                    "case_doc": null,
+                    "success": true,
+                    "failures": "",
+                    "errors": "",
+                    "start_timestamp": 1641283902.919171,
+                    "is_failure": false,
+                    "is_error": false,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.second_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_screen_shot.log",
+                    "error_type": "",
+                    "error_value": "",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641283905,
+                            "datetime": "2022-01-04 16:11:45"
+                        },
+                        {
+                            "name": "assertTrue-success",
+                            "url": "/pages/index/index",
+                            "path": "images/assertTrue-success.png",
+                            "ts": 1641283906,
+                            "datetime": "2022-01-04 16:11:46"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641283906,
+                            "datetime": "2022-01-04 16:11:46"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [
+                        {
+                            "name": "assertTrue",
+                            "ret": true,
+                            "msg": null,
+                            "img": null
+                        }
+                    ],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": {
+                        "bgPic": null,
+                        "picChoosed": false
+                    },
+                    "stop_timestamp": 1641283906.4182541,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    def test_screen_shot(self):\n",
+                            "        output_path = os.path.join(os.path.dirname(__file__), \"outputs/test_screen_shot.png\")\n",
+                            "        if not os.path.isdir(os.path.dirname(output_path)):\n",
+                            "            os.mkdir(os.path.dirname(output_path))\n",
+                            "        if os.path.isfile(output_path):\n",
+                            "            os.remove(output_path)\n",
+                            "        ret = self.app.screen_shot(output_path)\n",
+                            "        self.assertTrue(os.path.isfile(output_path))\n",
+                            "        os.remove(output_path)\n"
+                        ],
+                        "start": 4
+                    },
+                    "filename": "test_screen_shot.json",
+                    "relative": "20220104161114/test_screen_shot/20220104161142918417",
+                    "costs": "3.499\u79d2"
+                }
+            ],
+            "summary": {
+                "case_num": 1,
+                "success": 1,
+                "failed": 0,
+                "error": 0,
+                "costs": "3.499\u79d2",
+                "start_time": "2022/01/04 16:11:42",
+                "end_time": "2022/01/04 16:11:46",
+                "detail": [
+                    {
+                        "name": "test",
+                        "case_num": 1,
+                        "success": 1,
+                        "failed": 0,
+                        "error": 0,
+                        "start_time": "2022/01/04 16:11:42",
+                        "end_time": "2022/01/04 16:11:46",
+                        "costs": "3.499\u79d2"
+                    }
+                ]
+            }
+        },
+        {
+            "case_datas": [
+                {
+                    "case_name": "test_get_system_info",
+                    "run_time": "20220104 15:40:13",
+                    "test_type": "FirstTest",
+                    "case_doc": null,
+                    "success": true,
+                    "failures": "",
+                    "errors": "",
+                    "start_timestamp": 1641282013.208202,
+                    "is_failure": false,
+                    "is_error": false,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.first_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_get_system_info.log",
+                    "error_type": "",
+                    "error_value": "",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641282015,
+                            "datetime": "2022-01-04 15:40:15"
+                        },
+                        {
+                            "name": "assertIn-success",
+                            "url": "/pages/index/index",
+                            "path": "images/assertIn-success.png",
+                            "ts": 1641282015,
+                            "datetime": "2022-01-04 15:40:15"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641282015,
+                            "datetime": "2022-01-04 15:40:15"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [
+                        {
+                            "name": "assertIn",
+                            "ret": true,
+                            "msg": null,
+                            "img": null
+                        }
+                    ],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": {
+                        "bgPic": null,
+                        "picChoosed": false
+                    },
+                    "stop_timestamp": 1641282015.6610482,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    def test_get_system_info(self):\n",
+                            "        sys_info = self.mini.get_system_info()\n",
+                            "        self.assertIn(\"SDKVersion\", sys_info)\n"
+                        ],
+                        "start": 6
+                    },
+                    "filename": "test_get_system_info.json",
+                    "relative": "20220104153950/test_get_system_info/20220104154013206701",
+                    "costs": "2.453\u79d2"
+                }
+            ],
+            "summary": {
+                "case_num": 1,
+                "success": 1,
+                "failed": 0,
+                "error": 0,
+                "costs": "2.453\u79d2",
+                "start_time": "2022/01/04 15:40:13",
+                "end_time": "2022/01/04 15:40:15",
+                "detail": [
+                    {
+                        "name": "test",
+                        "case_num": 1,
+                        "success": 1,
+                        "failed": 0,
+                        "error": 0,
+                        "start_time": "2022/01/04 15:40:13",
+                        "end_time": "2022/01/04 15:40:15",
+                        "costs": "2.453\u79d2"
+                    }
+                ]
+            }
+        },
+        {
+            "case_datas": [
+                {
+                    "case_name": "test_get_system_info",
+                    "run_time": "20220104 15:39:27",
+                    "test_type": "FirstTest",
+                    "case_doc": null,
+                    "success": true,
+                    "failures": "",
+                    "errors": "",
+                    "start_timestamp": 1641281967.234499,
+                    "is_failure": false,
+                    "is_error": false,
+                    "module": ".Users.dongman.PycharmProjects.dongmanworkproject.weixinprojecttest.test.first_test",
+                    "package": "test",
+                    "failed_line_num": -1,
+                    "device": {
+                        "system_info": {
+                            "model": "iPhone 12/13 (Pro)",
+                            "pixelRatio": 3,
+                            "windowWidth": 390,
+                            "windowHeight": 753,
+                            "system": "iOS 10.0.1",
+                            "language": "zh_CN",
+                            "version": "8.0.5",
+                            "screenWidth": 390,
+                            "screenHeight": 844,
+                            "SDKVersion": "2.21.1",
+                            "brand": "devtools",
+                            "fontSizeSetting": 16,
+                            "benchmarkLevel": 1,
+                            "batteryLevel": 100,
+                            "statusBarHeight": 47,
+                            "safeArea": {
+                                "top": 44,
+                                "left": 0,
+                                "right": 390,
+                                "bottom": 810,
+                                "width": 390,
+                                "height": 766
+                            },
+                            "deviceOrientation": "portrait",
+                            "platform": "devtools",
+                            "enableDebug": false,
+                            "devicePixelRatio": 3
+                        }
+                    },
+                    "log_filename": "test_get_system_info.log",
+                    "error_type": "",
+                    "error_value": "",
+                    "screen_info": [
+                        {
+                            "name": "setup",
+                            "url": "/pages/index/index",
+                            "path": "images/setup.png",
+                            "ts": 1641281968,
+                            "datetime": "2022-01-04 15:39:28"
+                        },
+                        {
+                            "name": "assertIn-success",
+                            "url": "/pages/index/index",
+                            "path": "images/assertIn-success.png",
+                            "ts": 1641281968,
+                            "datetime": "2022-01-04 15:39:28"
+                        },
+                        {
+                            "name": "teardown",
+                            "url": "/pages/index/index",
+                            "path": "images/teardown.png",
+                            "ts": 1641281968,
+                            "datetime": "2022-01-04 15:39:28"
+                        }
+                    ],
+                    "check_list": [],
+                    "assert_list": [
+                        {
+                            "name": "assertIn",
+                            "ret": true,
+                            "msg": null,
+                            "img": null
+                        }
+                    ],
+                    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+                    "weapp_log_path": "weapp.log",
+                    "request_log_path": "request.log",
+                    "page_data": {
+                        "bgPic": null,
+                        "picChoosed": false
+                    },
+                    "stop_timestamp": 1641281968.4793549,
+                    "appId": "wx45acf50808533934",
+                    "appName": "huyuqi119\u7684\u63a5\u53e3\u6d4b\u8bd5\u53f7",
+                    "source": {
+                        "code": [
+                            "    def test_get_system_info(self):\n",
+                            "        sys_info = self.mini.get_system_info()\n",
+                            "        self.assertIn(\"SDKVersion\", sys_info)\n"
+                        ],
+                        "start": 6
+                    },
+                    "filename": "test_get_system_info.json",
+                    "relative": "20220104153925/test_get_system_info/20220104153927227924",
+                    "costs": "1.245\u79d2"
+                }
+            ],
+            "summary": {
+                "case_num": 1,
+                "success": 1,
+                "failed": 0,
+                "error": 0,
+                "costs": "1.245\u79d2",
+                "start_time": "2022/01/04 15:39:27",
+                "end_time": "2022/01/04 15:39:28",
+                "detail": [
+                    {
+                        "name": "test",
+                        "case_num": 1,
+                        "success": 1,
+                        "failed": 0,
+                        "error": 0,
+                        "start_time": "2022/01/04 15:39:27",
+                        "end_time": "2022/01/04 15:39:28",
+                        "costs": "1.245\u79d2"
+                    }
+                ]
+            }
+        }
+    ],
+    "summary": {}
+}

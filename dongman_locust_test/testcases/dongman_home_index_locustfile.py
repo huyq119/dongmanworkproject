@@ -92,63 +92,63 @@ class RecommendPost(FastHttpUser):
     # host = "https://qaapis02.dongmanmanhua.cn"
     host = "https://qaptsapis.dongmanmanhua.cn"
 
-    # @task
-    # def reporting_request_index(self):
-    #     # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
-    #     # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
-    #     #                                                                                            '-11eb-864f'
-    #     #                                                                                            '-00163e069c9c']
-    #     current_time = int(round(time.time() * 1000))
-    #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-    #     message_index = "/app/home/index?bannerImageType=IphoneX&expires=1640588894076&" \
-    #                     "imei=62F71887058F4F4C980FCF12E6334E15&language=zh-hans&locale=zh_CN&" \
-    #                     "md5=hDqDcV13caSlYHjRME2Ukg&newUser=Y&onOff=Y&platform=APP_IPHONE&serviceZone=CHINA&v=1"
-    #     cookie_name = 'NEO_SES=LQsBo2FyKsOnmsYsf9vvbK+GkXPDYEh+03PkCjjETF1ZAXRa9+ZtTbao44wLN59ndqH/0J3H0dCY8' \
-    #                   '+xvmAvjbBwVXI6h3Y4SNIAd' \
-    #                   '0ElH1RZsj4rBLXNCDuIi4TkyMG1uHTNQg+1rn2O7SFT3DyPOphnAUiqLnZSwkTlKQ4PrFH8A/vStwuEXQqOPvhbV' \
-    #                   '/rLj6UUMGpHhFIfTkbDB' \
-    #                   'iV7D6THjDn82Ptcdz5crrMUm8x2Z4XeYIsJJttBKi+RpqL2Q3sJ5OcLGAQ' \
-    #                   '/BkO4yzZZqOalKROmP487Hsaj1IhxgbvQlrRmyTffmz+hWJQvoM4b' \
-    #                   'jw81/a2u1nuBkhKrsamPa0j1aizy5oDKMr7nAEoeSaQxneaZso1RB8gq390P2LwRjzliMTxtJ8SMDenJUkwfvYg==;uuid' \
-    #                   '=62F71887058F4F4C980FCF12E6334E15 '
-    #     headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
-    #                'Accept-Encoding': 'gzip, deflate, br',
-    #                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
-    #                              'KHTML, '
-    #                              'like Gecko) Mobile/15E148 ',
-    #                'Cookie': cookie_name}
-    #     r_home_index = self.client.get(message_index, headers=headers)
-    #     # print(cookie_name)
-    #     # print(f'单次抽奖结果为：{r_one.text}')
-    #
-    #     print(f'测试结果为：{r_home_index.status_code}({now})')
-    #     # print("Response status code:", r.status_code)
-    #     assert r_home_index.status_code == 200
+    @task
+    def reporting_request_index(self):
+        # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
+        # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
+        #                                                                                            '-11eb-864f'
+        #                                                                                            '-00163e069c9c']
+        current_time = int(round(time.time() * 1000))
+        now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
+        message_index = "/app/home/index?bannerImageType=IphoneX&expires=1640588894076&" \
+                        "imei=62F71887058F4F4C980FCF12E6334E15&language=zh-hans&locale=zh_CN&" \
+                        "md5=hDqDcV13caSlYHjRME2Ukg&newUser=Y&onOff=Y&platform=APP_IPHONE&serviceZone=CHINA&v=1"
+        cookie_name = 'NEO_SES=LQsBo2FyKsOnmsYsf9vvbK+GkXPDYEh+03PkCjjETF1ZAXRa9+ZtTbao44wLN59ndqH/0J3H0dCY8' \
+                      '+xvmAvjbBwVXI6h3Y4SNIAd' \
+                      '0ElH1RZsj4rBLXNCDuIi4TkyMG1uHTNQg+1rn2O7SFT3DyPOphnAUiqLnZSwkTlKQ4PrFH8A/vStwuEXQqOPvhbV' \
+                      '/rLj6UUMGpHhFIfTkbDB' \
+                      'iV7D6THjDn82Ptcdz5crrMUm8x2Z4XeYIsJJttBKi+RpqL2Q3sJ5OcLGAQ' \
+                      '/BkO4yzZZqOalKROmP487Hsaj1IhxgbvQlrRmyTffmz+hWJQvoM4b' \
+                      'jw81/a2u1nuBkhKrsamPa0j1aizy5oDKMr7nAEoeSaQxneaZso1RB8gq390P2LwRjzliMTxtJ8SMDenJUkwfvYg==;uuid' \
+                      '=62F71887058F4F4C980FCF12E6334E15 '
+        headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
+                   'Accept-Encoding': 'gzip, deflate, br',
+                   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
+                                 'KHTML, '
+                                 'like Gecko) Mobile/15E148 ',
+                   'Cookie': cookie_name}
+        r_home_index = self.client.get(message_index, headers=headers)
+        # print(cookie_name)
+        # print(f'单次抽奖结果为：{r_one.text}')
 
-    # @task
-    # def reporting_request_v4(self):
-    #     current_time = int(round(time.time() * 1000))
-    #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-    #     message_index = "/app/episode/list/v4?expires=1640588894076&language=zh-hans&" \
-    #                     "locale=zh_CN&md5=PS3B087FXX69A42Vt0ksRQ&pageSize=513&" \
-    #                     "platform=APP_IPHONE&serviceZone=CHINA&startIndex=0&titleNo=241&v=8"
-    #     cookie_name = 'NEO_SES=LQsBo2FyKsOnmsYsf9vvbK+GkXPDYEh+03PkCjjETF1ZAXRa9+ZtTbao44wLN59ndqH/' \
-    #                   '0J3H0dCY8+xvmAvjbBwVXI6h3Y4SNIAd0ElH1RZsj4rBLXNCDuIi4TkyMG1uHTNQg+1rn2O7SFT3DyP' \
-    #                   'OphnAUiqLnZSwkTlKQ4PrFH8A/vStwuEXQqOPvhbV/rLj6UUMGpHhFIfTkbDBiV7D6THjDn82Ptcdz5' \
-    #                   'crrMUm8x2Z4XeYIsJJttBKi+RpqL2Q3sJ5OcLGAQ/BkO4yzZZqOalKROmP487Hsaj1IhxgbvQlrRmyT' \
-    #                   'ffmz+hWJQvoM4bjw81/a2u1nuBkhKrsamPa0j1aizy5oDKMr7nAEoeSaQxneaZso1RB8gq390P2Lw' \
-    #                   'RjzliMTxtJ8SMDenJUkwfvYg==;uuid=62F71887058F4F4C980FCF12E6334E15'
-    #     headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
-    #                'Accept-Encoding': 'gzip, deflate, br',
-    #                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
-    #                              'KHTML, '
-    #                              'like Gecko) Mobile/15E148 ',
-    #                'Cookie': cookie_name}
-    #     r_home_index = self.client.get(message_index, headers=headers)
-    #
-    #     print(f'测试结果为：{r_home_index.status_code}({now})')
-    #     assert r_home_index.status_code == 200
-    #
+        print(f'测试结果为：{r_home_index.status_code}({now})')
+        # print("Response status code:", r.status_code)
+        assert r_home_index.status_code == 200
+
+    @task
+    def reporting_request_v4(self):
+        current_time = int(round(time.time() * 1000))
+        now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
+        message_index = "/app/episode/list/v4?expires=1640588894076&language=zh-hans&" \
+                        "locale=zh_CN&md5=PS3B087FXX69A42Vt0ksRQ&pageSize=513&" \
+                        "platform=APP_IPHONE&serviceZone=CHINA&startIndex=0&titleNo=241&v=8"
+        cookie_name = 'NEO_SES=LQsBo2FyKsOnmsYsf9vvbK+GkXPDYEh+03PkCjjETF1ZAXRa9+ZtTbao44wLN59ndqH/' \
+                      '0J3H0dCY8+xvmAvjbBwVXI6h3Y4SNIAd0ElH1RZsj4rBLXNCDuIi4TkyMG1uHTNQg+1rn2O7SFT3DyP' \
+                      'OphnAUiqLnZSwkTlKQ4PrFH8A/vStwuEXQqOPvhbV/rLj6UUMGpHhFIfTkbDBiV7D6THjDn82Ptcdz5' \
+                      'crrMUm8x2Z4XeYIsJJttBKi+RpqL2Q3sJ5OcLGAQ/BkO4yzZZqOalKROmP487Hsaj1IhxgbvQlrRmyT' \
+                      'ffmz+hWJQvoM4bjw81/a2u1nuBkhKrsamPa0j1aizy5oDKMr7nAEoeSaQxneaZso1RB8gq390P2Lw' \
+                      'RjzliMTxtJ8SMDenJUkwfvYg==;uuid=62F71887058F4F4C980FCF12E6334E15'
+        headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
+                   'Accept-Encoding': 'gzip, deflate, br',
+                   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
+                                 'KHTML, '
+                                 'like Gecko) Mobile/15E148 ',
+                   'Cookie': cookie_name}
+        r_home_index = self.client.get(message_index, headers=headers)
+
+        print(f'测试结果为：{r_home_index.status_code}({now})')
+        assert r_home_index.status_code == 200
+
     @task
     def reporting_request_recommend(self):
         current_time = int(round(time.time() * 1000))
@@ -173,94 +173,6 @@ class RecommendPost(FastHttpUser):
         assert r_home_index.status_code == 200
 
     wait_time = between(5, 15)
-
-    # @task
-    # def reporting_request_two(self):
-    #     cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
-    #     # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
-    #     #                                                                                            '-11eb-864f'
-    #     #                                                                                            '-00163e069c9c']
-    #     message = "/activity/reward/obtain?activityId=1003&activityTaskId=5&platform=APP_IPHONE&obtainType=one"
-    #     for cookie_name in cookie_list:
-    #         headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
-    #                    'Accept-Encoding': 'gzip, deflate, br',
-    #                    'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, '
-    #                                  'like Gecko) Mobile/15E148 ',
-    #                    'Cookie': cookie_name}
-    #         r = self.client.post(message, headers=headers)
-    #         # print(cookie_name)
-    #         print(f'第二遍单次抽奖结果为：{r.text}')
-    #         # print("Response status code:", r.status_code)
-    #         assert r.status_code == 200
-    #     wait_time = between(1, 10)
-
-
-# class RecommendPost(FastHttpUser):
-#     host = "https://qam.dongmanmanhua.cn"
-#
-#     @task
-#     def reporting_request_one(self):
-#         id_list = yaml.safe_load(open("../dongmanlocustproject/neoid.yml"))
-#         # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
-#         #                                                                                            '-11eb-864f'
-#         #                                                                                            '-00163e069c9c']
-#         message = "/activity/reward/obtain?activityId=1003&activityTaskId=5&platform=APP_IPHONE&obtainType=ten"
-#         for neo_id in id_list:
-#             headers = {
-#                 'Cookie': 'sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%2217cfe58cd404e5-004bab7b79d5858'
-#                           '-3b176a50-329160-17cfe58cd415bf%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22'
-#                           '%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22'
-#                           '%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5'
-#                           '%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22%24device_id%22%3A'
-#                           '%2217cfe58cd404e5-004bab7b79d5858-3b176a50-329160-17cfe58cd415bf%22%7D; '
-#                           'NEO_CHK="r5V0mf9uRUZHZ/vmLGy3e8Ed3LlprsvPeTm0Or0OAkszRch18MzTTgQSrK5k8zc/Rynlbd9SAOZWYe'
-#                           '+CMBoyxR65BNZaWPPcY/bW7bYoveu2uEJYvvHo/wd4AJvwwbXntg9gcaXfdXd8XT42P1xKZhHY'
-#                           '+bef5qTyt29W7KaWrug="; '
-#                           'NEO_SES="CIKjjsdj9t4lSoc6G13RB0XJM5A6KO/3BFTJJzUBo1OVU1PmKSmVrUp2cx2MoRzGQ1XiwvsH5'
-#                           '+7YEaSewtABqA0pzSVeaVk1sIaxLDC+lxX1+zfxH6GIX53PQh7AQL+u/6xWaKMiiJ'
-#                           '+jAr3SZsp0VubaETyGk2Jd27deZ2LV25/teq6mTJX1K3RSwH/eOp'
-#                           '+HO9gHKWw5QG7m8wOYUOP8U0OxFYtMa14xqITQbNnquAGJEGDZcgBYPET20AbDqsf/cTt+/4RzpEX9'
-#                           '/PfzsUpag2wffMstdllvNQFs92uz9ki4r9V40RsRV5tK4vjsuYOSM2/95TeDgEC'
-#                           '+C28ppNKUfEjmYi0rYbGFjYz5SOyuU35oKFFieE7snld5V46M8onKP7rl0C+EPnrq+51HzNNGeA=="; '
-#                           'install_id=7215449203892887553; ttreq=1$f3e0aad47efe20ecab13a1f7d7b95bfd93b5d1bd; '
-#                           'currentAppVersion=279; wtu="a2b53189835796aa9adf7c8761a90c9c"; '
-#                           'NEO_CHK="r5V0mf9uRUZHZ/vmLGy3e8Ed3LlprsvPeTm0Or0OAkszRch18MzTTgQSrK5k8zc/Rynlbd9SAOZWYe'
-#                           '+CMBoyxR65BNZaWPPcY/bW7bYoveu2uEJYvvHo/wd4AJvwwbXn9TcgZZRzqtywFzUDTlCUOWgi1K21vg'
-#                           '+jKPGxI3H66JI="; locale=zh_CN; JSESSIONID=B02E366C3CC4A55AE255035E3A00230C',
-#                 'Accept': 'application/json, text/javascript, */*; q=0.01',
-#                 'X-R': 'XMLHttpRequest',
-#                 'Accept-Encoding': 'gzip, deflate, br',
-#                 'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, '
-#                               'like Gecko) Mobile/15E148 '
-#             }
-#             r = self.client.post(message, headers=headers)
-#             print(r.text)
-#             # print("Response status code:", r.status_code)
-#             assert r.status_code == 200
-#         wait_time = between(1, 10)
-
-# class EpisodeList(FastHttpUser):
-#     host = "https://qaapis.dongmanmanhua.cn"
-#
-#     @tag('tag1')
-#     @task
-#     def test_new(self):
-#         message = "/app/episode/list/v4?expires=1634972054459&language=zh-hans&locale=zh_CN&md5=EQAb0BWn7ohgVq" \
-#                   "-B_EGz4w&pageSize=214&platform=APP_IPHONE&serviceZone=CHINA&startIndex=0&titleNo=735&v=8 "
-#         r = self.client.get(message)
-#         print(r.status_code)
-#         wait_time = between(1, 5)
-#
-#     @tag('tag2')
-#     @task
-#     def test_card4(self):
-#         for title_name in yaml.safe_load(open("../dongmanlocustproject/title_name.yml")):
-#             message = f"/app/home/card4?expires=1634028869836&language=zh-hans&locale=zh_CN" \
-#                       f"&md5=AiUM4xmOUDt5H4YmIdPAWA&platform=APP_IPHONE&serviceZone=CHINA&sortOrder=UPDATE&" \
-#                       f"weekday={title_name}&bannerImageType=Default"
-#             r = self.client.get(message)
-#             assert r.status_code == 200
-#         wait_time = between(1, 5)
 
 
 # class MyCustomShape(LoadTestShape):
