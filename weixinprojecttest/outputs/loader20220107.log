@@ -1,0 +1,5 @@
+DEBUG 2022-01-07 12:40:21,132 loader.py  load_from_suite 67  ==========Scan Cases from suite===========
+INFO  2022-01-07 12:40:21,137 miniconfig.py from_file       70  load config from config.json
+INFO  2022-01-07 12:40:21,152 loader.py  run_session     231 start session with fork mode 
+{'platform': 'ide', 'app': 'wx', 'debug_mode': 'debug', 'close_ide': False, 'assert_capture': False, 'auto_relaunch': True, 'device_desire': {}, 'account_info': {}, 'report_usage': True, 'remote_connect_timeout': 300, 'request_timeout': 60, 'use_push': True, 'full_reset': False, 'outputs': None, 'enable_app_log': False, 'enable_network_panel': False, 'project_path': '/Users/dongman/PycharmProjects/dongmanworkproject/ChristmasHat', 'dev_tool_path': '/Applications/wechatwebdevtools.app/Contents/MacOS/cli', 'test_port': 9420, 'mock_native_modal': None, 'mock_request': [], 'auto_authorize': False, 'audits': None, 'is_default_config': False}
+

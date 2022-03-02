@@ -11,13 +11,14 @@ from typing import List
 
 from faker import Faker
 import pyperclip
+import json
 
-fake = Faker(['ko_KR'])
-text_loc = ''
-for i in range(10):
-    text_loc = text_loc + '\n' + fake.address()
-pyperclip.copy(text_loc)
-print(text_loc)
+fake = Faker(['zh_CN'])
+text_loc = []
+for i in range(5):
+    text_loc.append(str(fake.phone_number()))
+content = json.dumps(text_loc)
+print(content)
 
 
 
