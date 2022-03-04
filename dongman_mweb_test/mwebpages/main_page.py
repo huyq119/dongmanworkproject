@@ -1,6 +1,5 @@
 import time
 
-from selenium.webdriver import TouchActions
 from selenium.webdriver.common.by import By
 
 from dongman_mweb_test.mwebpages.bashpage import BasePage
