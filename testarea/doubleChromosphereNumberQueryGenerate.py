@@ -83,12 +83,12 @@ if __name__ == '__main__':
         print(lucky_num)
     elif num == '2':
         you_phase = input('请输入最新一期期数')
-        i = 0
-        for i in range(5):
+        i = 'y'
+        while i == 'y':
             your_lucky_num = input('请输入你的号码(以空格分隔)，一共七组数字')
             b = your_lucky_num.split(' ')
             query(you_phase, b)
-            i += 1
+            i = input("是否继续？")
 
     elif num == '3':
         creatLuckyNum()
