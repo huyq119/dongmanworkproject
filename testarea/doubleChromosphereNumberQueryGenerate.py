@@ -30,7 +30,7 @@ def query(you_phase, your_lucky_num):
             flag = True  # 蓝色球相同
         winningNumbers = list(set(a[0:6]).intersection(set(your_lucky_num[0:6])))
         count = len(winningNumbers)
-        print("中奖红色号码为："+str(winningNumbers))
+        print("中奖红色号码为：" + str(winningNumbers))
         #
         # for i in a[0:6]:
         #     for j in your_lucky_num[0:6]:
@@ -63,17 +63,22 @@ def query(you_phase, your_lucky_num):
 
 
 def creatLuckyNum():
-    blueball = random.randint(1, 16)
-    luckynum1 = ''
-    for r in range(6):
-        redball = random.randint(1, 33)
-        if redball <= 9:
-            redball = '0' + str(redball)
-        luckynum1 += str(redball) + ' '
-    if blueball <= 9:
-        blueball = '0' + str(blueball)
-
-    print('红球：' + luckynum1 + ' ' + '蓝球：' + blueball)
+    i = 0
+    numbers_list = []
+    for i in range(5):
+        blueball = random.randint(1, 16)
+        luckynum1 = ''
+        for r in range(6):
+            redball = random.randint(1, 33)
+            if redball <= 9:
+                redball = '0' + str(redball)
+            luckynum1 += str(redball) + ' '
+        if blueball <= 9:
+            blueball = '0' + str(blueball)
+        number_add = str(luckynum1) + str(blueball)
+        numbers_list.append(number_add)
+        print('红球：' + str(luckynum1) + ' ' + '蓝球：' + str(blueball))
+    print(numbers_list)
     print('祝你好运！')
 
 
