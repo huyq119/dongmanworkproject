@@ -68,16 +68,23 @@ def creatLuckyNum():
     for i in range(5):
         blueball = random.randint(1, 16)
         luckynum1 = ''
-        for r in range(6):
+        judgement = []
+        r = 0
+        while r < 6:
             redball = random.randint(1, 33)
+            if redball in judgement:
+                continue
+            judgement.append(redball)
             if redball <= 9:
                 redball = '0' + str(redball)
             luckynum1 += str(redball) + ' '
+            r += 1
         if blueball <= 9:
             blueball = '0' + str(blueball)
         number_add = str(luckynum1) + str(blueball)
         numbers_list.append(number_add)
         print('红球：' + str(luckynum1) + ' ' + '蓝球：' + str(blueball))
+        i += 1
     print(numbers_list)
     print('祝你好运！')
 
