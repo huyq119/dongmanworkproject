@@ -63,7 +63,6 @@ def query(you_phase, your_lucky_num):
 
 
 def creatLuckyNum():
-    i = 0
     numbers_list = []
     for i in range(5):
         blueball = random.randint(1, 16)
@@ -75,17 +74,21 @@ def creatLuckyNum():
             if redball in judgement:
                 continue
             judgement.append(redball)
-            if redball <= 9:
-                redball = '0' + str(redball)
-            luckynum1 += str(redball) + ' '
             r += 1
+        new_red = sorted(judgement)
+        for j in new_red:
+            new_ball = j
+            if new_ball <= 9:
+                new_ball = '0' + str(new_ball)
+            luckynum1 += str(new_ball) + ' '
         if blueball <= 9:
             blueball = '0' + str(blueball)
         number_add = str(luckynum1) + str(blueball)
         numbers_list.append(number_add)
         print('红球：' + str(luckynum1) + ' ' + '蓝球：' + str(blueball))
-        i += 1
-    print(numbers_list)
+
+    for j in numbers_list:
+        print(j)
     print('祝你好运！')
 
 

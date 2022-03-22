@@ -15,7 +15,7 @@ import json
 
 fake = Faker(['zh_CN'])
 text_loc = []
-for i in range(1):
+for i in range(3):
     text_loc.append(str(fake.phone_number()))
 content = json.dumps(text_loc)
 print(content)
