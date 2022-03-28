@@ -1,6 +1,7 @@
 import requests
 import re
 import random
+import yaml
 
 url = 'http://henanfucai.com/'
 resp = requests.get(url)
@@ -104,9 +105,12 @@ if __name__ == '__main__':
         you_phase = input('请输入最新一期期数')
         i = 'y'
         while i == 'y':
-            your_lucky_num = input('请输入你的号码(以空格分隔)，一共七组数字')
-            b = your_lucky_num.split(' ')
-            query(you_phase, b)
+            # your_lucky_num = input('请输入你的号码(以空格分隔)，一共七组数字')
+            lottery_list = yaml.safe_load(open("./lotterynumberlist.yml"))
+            for number in lottery_list:
+                your_lucky_num = number
+                b = your_lucky_num.split(' ')
+                query(you_phase, b)
             i = input("是否继续？")
 
     elif num == '3':
