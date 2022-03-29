@@ -1,3 +1,8 @@
+# Jinja2          3.0.3   3.1.1  wheel
+# msal-extensions 0.3.1   1.0.0  wheel
+# tidevice        0.4.10  0.7.1  wheel
+# 这三个模块暂时不要升级
+
 click==8.1.0
 Faker==13.3.4
 Flask==2.1.0
