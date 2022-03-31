@@ -90,7 +90,7 @@ def get_body(neo_id):
 
 class NewUserBenefits(FastHttpUser):
     # host = "https://qaapis02.dongmanmanhua.cn"
-    # host = "https://qaptsapis.dongmanmanhua.cn"
+    # host = " "
     host = "https://qaapis.dongmanmanhua.cn"
 
     @task
