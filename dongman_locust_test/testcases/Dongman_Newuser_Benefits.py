@@ -90,8 +90,8 @@ def get_body(neo_id):
 
 class NewUserBenefits(FastHttpUser):
     # host = "https://qaapis02.dongmanmanhua.cn"
-    # host = " "
-    host = "https://qaapis.dongmanmanhua.cn"
+    host = "https://qaptsapis.dongmanmanhua.cn"
+    # host = "https://qaapis.dongmanmanhua.cn"
 
     @task
     def new_user_benefit_page(self):
@@ -117,28 +117,28 @@ class NewUserBenefits(FastHttpUser):
         print(f'测试结果为：{r_home_index.status_code}({now})')
         assert r_home_index.status_code == 200
 
-    @task
-    def limit_free_work_list(self):
-        current_time = int(round(time.time() * 1000))
-        now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-        message_index = "/app/newuser/benefits/list?expires=1648627439079&language=zh-hans" \
-                        "&locale=zh_CN&md5=dnKPoE67Q0b4onp5ELoGwQ&platform=APP_IPHONE&serviceZone=CHINA"
-        cookie_name = "NEO_SES=SfHERgqNEmpb8RPt2wFeRn3xDf8+CXmo70Neey432AxowgFWQ713rA4N47" \
-                      "WmH541atMQcE/ApkRmQVLiFZ4ot16XPz+Odt/o0D4YWtOyx30KdUSU/aAEyJ9B8iki25hp48WEQ" \
-                      "/XswGBHcEe1C52r7Mlx7eP84OodWhwN6St8srqopDTsxH8Wo8BuONR1EMobehtZgOln8PeZcEV27B9QU" \
-                      "jOqj7OUqLtA13LTGgDEtrj4lqw8k1Up9VNUqBCoVIYEUVav3n33IqRlnNN1QxP+ShVBVxAyl5lLh9INSkbUV8TOR3FAt" \
-                      "Svp8egiwuqV9PCZIPtChvOx9HAomHEEd1s69+Pp16kJJCnRevNECOKy04wiDFpPGOmarDm5yFo9B2A6RwTB9pf/6" \
-                      "/iNuVU+iGLvvg==;uuid=F2BEF66BEF274E2687AD7199CD86CCAD"
-        headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
-                   'Accept-Encoding': 'gzip, deflate, br',
-                   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
-                                 'KHTML, '
-                                 'like Gecko) Mobile/15E148 ',
-                   'Cookie': cookie_name}
-        r_home_index = self.client.get(message_index, headers=headers)
-
-        print(f'测试结果为：{r_home_index.status_code}({now})')
-        assert r_home_index.status_code == 200
+    # @task
+    # def limit_free_work_list(self):
+    #     current_time = int(round(time.time() * 1000))
+    #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
+    #     message_index = "/app/newuser/benefits/list?expires=1648627439079&language=zh-hans" \
+    #                     "&locale=zh_CN&md5=dnKPoE67Q0b4onp5ELoGwQ&platform=APP_IPHONE&serviceZone=CHINA"
+    #     cookie_name = "NEO_SES=SfHERgqNEmpb8RPt2wFeRn3xDf8+CXmo70Neey432AxowgFWQ713rA4N47" \
+    #                   "WmH541atMQcE/ApkRmQVLiFZ4ot16XPz+Odt/o0D4YWtOyx30KdUSU/aAEyJ9B8iki25hp48WEQ" \
+    #                   "/XswGBHcEe1C52r7Mlx7eP84OodWhwN6St8srqopDTsxH8Wo8BuONR1EMobehtZgOln8PeZcEV27B9QU" \
+    #                   "jOqj7OUqLtA13LTGgDEtrj4lqw8k1Up9VNUqBCoVIYEUVav3n33IqRlnNN1QxP+ShVBVxAyl5lLh9INSkbUV8TOR3FAt" \
+    #                   "Svp8egiwuqV9PCZIPtChvOx9HAomHEEd1s69+Pp16kJJCnRevNECOKy04wiDFpPGOmarDm5yFo9B2A6RwTB9pf/6" \
+    #                   "/iNuVU+iGLvvg==;uuid=F2BEF66BEF274E2687AD7199CD86CCAD"
+    #     headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
+    #                'Accept-Encoding': 'gzip, deflate, br',
+    #                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
+    #                              'KHTML, '
+    #                              'like Gecko) Mobile/15E148 ',
+    #                'Cookie': cookie_name}
+    #     r_home_index = self.client.get(message_index, headers=headers)
+    #
+    #     print(f'测试结果为：{r_home_index.status_code}({now})')
+    #     assert r_home_index.status_code == 200
 
     wait_time = between(5, 15)
 
