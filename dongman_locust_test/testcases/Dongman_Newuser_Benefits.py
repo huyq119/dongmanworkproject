@@ -93,42 +93,19 @@ class NewUserBenefits(FastHttpUser):
     host = "https://qaptsapis.dongmanmanhua.cn"
     # host = "https://qaapis.dongmanmanhua.cn"
 
-    @task
-    def new_user_benefit_page(self):
-
-        current_time = int(round(time.time() * 1000))
-        now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-        message_index = "/app/newuser/benefits?expires=1648627439079&language=zh-hans&" \
-                        "locale=zh_CN&md5=4GFo_MPLqc7wRaUKFmu_FQ&platform=APP_IPHONE&serviceZone=CHINA"
-        cookie_name = "NEO_SES=SfHERgqNEmpb8RPt2wFeRn3xDf8+CXmo70Neey432AxowgFWQ713rA4N47WmH541atMQcE" \
-                      "/ApkRmQVLiFZ4ot16XPz+Odt/o0D4YWtOyx30KdUSU/aAEyJ9B8iki25hp48WEQ/XswGBHcEe1C52r7Mlx" \
-                      "7eP84OodWhwN6St8srqopDTsxH8Wo8BuONR1EMobehtZgOln8PeZcEV27B9QUjOqj7OUqLtA13LTGgDEtrj4" \
-                      "lqw8k1Up9VNUqBCoVIYEUVav3n33IqRlnNN1QxP+ShVBVxAyl5lLh9INSkbUV8TOR3FAtSvp8egiwuqV9PCZI" \
-                      "PtChvOx9HAomHEEd1s69+Pp16kJJCnRevNECOKy04wiDFpPGOmarDm5yFo9B2A6RwTB9pf/6/iNuVU+iGLvvg=" \
-                      "=;uuid=F2BEF66BEF274E2687AD7199CD86CCAD"
-        headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
-                   'Accept-Encoding': 'gzip, deflate, br',
-                   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
-                                 'KHTML, '
-                                 'like Gecko) Mobile/15E148 ',
-                   'Cookie': cookie_name}
-        r_home_index = self.client.get(message_index, headers=headers)
-
-        print(f'测试结果为：{r_home_index.status_code}({now})')
-        assert r_home_index.status_code == 200
-
     # @task
-    # def limit_free_work_list(self):
+    # def new_user_benefit_page(self):
+    #
     #     current_time = int(round(time.time() * 1000))
     #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-    #     message_index = "/app/newuser/benefits/list?expires=1648627439079&language=zh-hans" \
-    #                     "&locale=zh_CN&md5=dnKPoE67Q0b4onp5ELoGwQ&platform=APP_IPHONE&serviceZone=CHINA"
-    #     cookie_name = "NEO_SES=SfHERgqNEmpb8RPt2wFeRn3xDf8+CXmo70Neey432AxowgFWQ713rA4N47" \
-    #                   "WmH541atMQcE/ApkRmQVLiFZ4ot16XPz+Odt/o0D4YWtOyx30KdUSU/aAEyJ9B8iki25hp48WEQ" \
-    #                   "/XswGBHcEe1C52r7Mlx7eP84OodWhwN6St8srqopDTsxH8Wo8BuONR1EMobehtZgOln8PeZcEV27B9QU" \
-    #                   "jOqj7OUqLtA13LTGgDEtrj4lqw8k1Up9VNUqBCoVIYEUVav3n33IqRlnNN1QxP+ShVBVxAyl5lLh9INSkbUV8TOR3FAt" \
-    #                   "Svp8egiwuqV9PCZIPtChvOx9HAomHEEd1s69+Pp16kJJCnRevNECOKy04wiDFpPGOmarDm5yFo9B2A6RwTB9pf/6" \
-    #                   "/iNuVU+iGLvvg==;uuid=F2BEF66BEF274E2687AD7199CD86CCAD"
+    #     message_index = "/app/newuser/benefits?expires=1648627439079&language=zh-hans&" \
+    #                     "locale=zh_CN&md5=4GFo_MPLqc7wRaUKFmu_FQ&platform=APP_IPHONE&serviceZone=CHINA"
+    #     cookie_name = "NEO_SES=SfHERgqNEmpb8RPt2wFeRn3xDf8+CXmo70Neey432AxowgFWQ713rA4N47WmH541atMQcE" \
+    #                   "/ApkRmQVLiFZ4ot16XPz+Odt/o0D4YWtOyx30KdUSU/aAEyJ9B8iki25hp48WEQ/XswGBHcEe1C52r7Mlx" \
+    #                   "7eP84OodWhwN6St8srqopDTsxH8Wo8BuONR1EMobehtZgOln8PeZcEV27B9QUjOqj7OUqLtA13LTGgDEtrj4" \
+    #                   "lqw8k1Up9VNUqBCoVIYEUVav3n33IqRlnNN1QxP+ShVBVxAyl5lLh9INSkbUV8TOR3FAtSvp8egiwuqV9PCZI" \
+    #                   "PtChvOx9HAomHEEd1s69+Pp16kJJCnRevNECOKy04wiDFpPGOmarDm5yFo9B2A6RwTB9pf/6/iNuVU+iGLvvg=" \
+    #                   "=;uuid=F2BEF66BEF274E2687AD7199CD86CCAD"
     #     headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
     #                'Accept-Encoding': 'gzip, deflate, br',
     #                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
@@ -139,6 +116,29 @@ class NewUserBenefits(FastHttpUser):
     #
     #     print(f'测试结果为：{r_home_index.status_code}({now})')
     #     assert r_home_index.status_code == 200
+
+    @task
+    def limit_free_work_list(self):
+        current_time = int(round(time.time() * 1000))
+        now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
+        message_index = "/app/newuser/benefits/list?expires=1648627439079&language=zh-hans" \
+                        "&locale=zh_CN&md5=dnKPoE67Q0b4onp5ELoGwQ&platform=APP_IPHONE&serviceZone=CHINA"
+        cookie_name = "NEO_SES=SfHERgqNEmpb8RPt2wFeRn3xDf8+CXmo70Neey432AxowgFWQ713rA4N47" \
+                      "WmH541atMQcE/ApkRmQVLiFZ4ot16XPz+Odt/o0D4YWtOyx30KdUSU/aAEyJ9B8iki25hp48WEQ" \
+                      "/XswGBHcEe1C52r7Mlx7eP84OodWhwN6St8srqopDTsxH8Wo8BuONR1EMobehtZgOln8PeZcEV27B9QU" \
+                      "jOqj7OUqLtA13LTGgDEtrj4lqw8k1Up9VNUqBCoVIYEUVav3n33IqRlnNN1QxP+ShVBVxAyl5lLh9INSkbUV8TOR3FAt" \
+                      "Svp8egiwuqV9PCZIPtChvOx9HAomHEEd1s69+Pp16kJJCnRevNECOKy04wiDFpPGOmarDm5yFo9B2A6RwTB9pf/6" \
+                      "/iNuVU+iGLvvg==;uuid=F2BEF66BEF274E2687AD7199CD86CCAD"
+        headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
+                   'Accept-Encoding': 'gzip, deflate, br',
+                   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
+                                 'KHTML, '
+                                 'like Gecko) Mobile/15E148 ',
+                   'Cookie': cookie_name}
+        r_home_index = self.client.get(message_index, headers=headers)
+
+        print(f'测试结果为：{r_home_index.status_code}({now})')
+        assert r_home_index.status_code == 200
 
     wait_time = between(5, 15)
 
@@ -164,7 +164,7 @@ class NewUserBenefits(FastHttpUser):
 #             return user_count, self.spawn_rate
 #         return None
 
-
+#
 # class DoubleWave(LoadTestShape):
 #     """
 #     A shape to immitate some specific user behaviour. In this example, midday
@@ -177,10 +177,10 @@ class NewUserBenefits(FastHttpUser):
 #         time_limit -- total length of test
 #     """
 #
-#     min_users = 100
+#     min_users = 10
 #     peak_one_users = 200
 #     peak_two_users = 100
-#     time_limit = 60
+#     time_limit = 6000
 #
 #     def tick(self):
 #         run_time = round(self.get_run_time())
@@ -197,50 +197,50 @@ class NewUserBenefits(FastHttpUser):
 #         else:
 #             return None
 
-# class StagesShape(LoadTestShape):
-#     """
-#     A simply load test shape class that has different user and spawn_rate at
-#     different stages.
-#     Keyword arguments:
-#         stages -- A list of dicts, each representing a stage with the following keys:
-#             duration -- When this many seconds pass the test is advanced to the next stage
-#             users -- Total user count
-#             spawn_rate -- Number of users to start/stop per second
-#             stop -- A boolean that can stop that test at a specific stage
-#         stop_at_end -- Can be set to stop once all stages have run.
-#     """
-#
-#     stages = [
-#         {"duration": 60, "users": 100, "spawn_rate": 10},
-#         {"duration": 120, "users": 200, "spawn_rate": 10},
-#         {"duration": 180, "users": 300, "spawn_rate": 10},
-#         {"duration": 240, "users": 400, "spawn_rate": 10},
-#         {"duration": 300, "users": 500, "spawn_rate": 10},
-#         {"duration": 360, "users": 600, "spawn_rate": 10},
-#         {"duration": 420, "users": 700, "spawn_rate": 10},
-#         {"duration": 480, "users": 800, "spawn_rate": 10},
-#         {"duration": 540, "users": 900, "spawn_rate": 10},
-#         {"duration": 600, "users": 1000, "spawn_rate": 10},
-#         {"duration": 660, "users": 900, "spawn_rate": 10},
-#         {"duration": 720, "users": 800, "spawn_rate": 10},
-#         {"duration": 780, "users": 700, "spawn_rate": 10},
-#         {"duration": 840, "users": 600, "spawn_rate": 10},
-#         {"duration": 900, "users": 500, "spawn_rate": 10},
-#         {"duration": 960, "users": 400, "spawn_rate": 10},
-#         {"duration": 1020, "users": 300, "spawn_rate": 10},
-#         {"duration": 1080, "users": 200, "spawn_rate": 10},
-#         {"duration": 1140, "users": 100, "spawn_rate": 10},
-#     ]
-#
-#     def tick(self):
-#         run_time = self.get_run_time()
-#
-#         for stage in self.stages:
-#             if run_time < stage["duration"]:
-#                 tick_data = (stage["users"], stage["spawn_rate"])
-#                 return tick_data
-#
-#         return None
+class StagesShape(LoadTestShape):
+    """
+    A simply load test shape class that has different user and spawn_rate at
+    different stages.
+    Keyword arguments:
+        stages -- A list of dicts, each representing a stage with the following keys:
+            duration -- When this many seconds pass the test is advanced to the next stage
+            users -- Total user count
+            spawn_rate -- Number of users to start/stop per second
+            stop -- A boolean that can stop that test at a specific stage
+        stop_at_end -- Can be set to stop once all stages have run.
+    """
+
+    stages = [
+        {"duration": 60, "users": 20, "spawn_rate": 1},
+        {"duration": 120, "users": 40, "spawn_rate": 1},
+        {"duration": 180, "users": 60, "spawn_rate": 1},
+        {"duration": 240, "users": 80, "spawn_rate": 1},
+        {"duration": 300, "users": 100, "spawn_rate": 1},
+        {"duration": 360, "users": 120, "spawn_rate": 1},
+        {"duration": 420, "users": 140, "spawn_rate": 1},
+        {"duration": 480, "users": 160, "spawn_rate": 1},
+        {"duration": 540, "users": 180, "spawn_rate": 1},
+        {"duration": 600, "users": 200, "spawn_rate": 1},
+        {"duration": 660, "users": 180, "spawn_rate": 1},
+        {"duration": 720, "users": 160, "spawn_rate": 1},
+        {"duration": 780, "users": 140, "spawn_rate": 1},
+        {"duration": 840, "users": 120, "spawn_rate": 1},
+        {"duration": 900, "users": 100, "spawn_rate": 1},
+        {"duration": 960, "users": 80, "spawn_rate": 1},
+        {"duration": 1020, "users": 60, "spawn_rate": 1},
+        {"duration": 1080, "users": 40, "spawn_rate": 1},
+        {"duration": 1140, "users": 20, "spawn_rate": 1},
+    ]
+
+    def tick(self):
+        run_time = self.get_run_time()
+
+        for stage in self.stages:
+            if run_time < stage["duration"]:
+                tick_data = (stage["users"], stage["spawn_rate"])
+                return tick_data
+
+        return None
 
 # class StepLoadShape(LoadTestShape):
 #     """
@@ -268,7 +268,7 @@ class NewUserBenefits(FastHttpUser):
 
 # Step = namedtuple("Step", ["users", "dwell"])
 
-
+#
 #
 #
 # class StepLoadShape(LoadTestShape):

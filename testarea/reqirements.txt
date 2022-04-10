@@ -3,9 +3,10 @@
 # tidevice        0.4.10  0.7.1  wheel
 # 这三个模块暂时不要升级
 
-pymongo==4.1.0
-setuptools==62.0.0
-azure-identity==1.9.0
+google-auth==2.6.3
+locust==2.8.6
+PyPDF2==1.27.0
+
 
 
 
