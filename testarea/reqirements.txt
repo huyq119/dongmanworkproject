@@ -3,9 +3,9 @@
 # tidevice        0.4.10  0.7.1  wheel
 # 这三个模块暂时不要升级
 
-google-api-core==2.7.2
-pymongo==4.1.1
-PyQt5-sip==12.10.1
+PyPDF2==1.27.6
+typing_extensions==4.2.0
+
 
 
 
