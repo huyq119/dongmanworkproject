@@ -1,0 +1,6 @@
+google-auth     2.6.5   2.6.6  wheel
+Jinja2          3.0.3   3.1.1  wheel
+msal-extensions 0.3.1   1.0.0  wheel
+protobuf        3.20.0  3.20.1 wheel
+PyPDF2          1.27.7  1.27.8 wheel
+tidevice        0.4.10  0.7.10 wheel
