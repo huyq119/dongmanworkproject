@@ -3,9 +3,7 @@
 # tidevice        0.4.10  0.7.1  wheel
 # 这三个模块暂时不要升级
 
-google-auth==2.6.6
-protobuf==3.20.1
-PyPDF2==1.27.8
+Faker==13.4.0
 
 
 
