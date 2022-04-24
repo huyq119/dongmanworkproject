@@ -3,7 +3,7 @@
 # tidevice        0.4.10  0.7.1  wheel
 # 这三个模块暂时不要升级
 
-Faker==13.4.0
+pytest==7.1.2
 
 
 

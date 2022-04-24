@@ -98,7 +98,7 @@ class BasePage:
         self._driver.quit()
 
     def go_to_main(self):
-        self._driver.get("https://qam.dongmanmanhua.cn/")
+        self._driver.get("https://m.dongmanmanhua.cn/")
         above = self._driver.find_element(By.CSS_SELECTOR, "#ct > div.youthModePopupWin")
         ActionChains(self._driver).move_to_element(above).perform()
         self._driver.find_element(By.CSS_SELECTOR, "#ct > div.youthModePopupWin > a").click()
