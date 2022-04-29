@@ -3,7 +3,15 @@
 # tidevice        0.4.10  0.7.1  wheel
 # 这三个模块暂时不要升级
 
-pytest==7.1.2
+azure-identity  1.9.0   1.10.0 wheel
+click           8.1.2   8.1.3  wheel
+cryptography    37.0.0  37.0.1 wheel
+Faker           13.4.0  13.6.0 wheel
+Flask           2.1.1   2.1.2  wheel
+Jinja2          3.0.3   3.1.2  wheel
+msal-extensions 0.3.1   1.0.0  wheel
+tidevice        0.4.10  0.7.11 wheel
+Werkzeug        2.1.1   2.1.2  wheel
 
 
 
