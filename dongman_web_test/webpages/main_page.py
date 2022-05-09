@@ -1,6 +1,6 @@
 import time
 
-from selenium.webdriver import TouchActions, ActionChains
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 
 from dongman_web_test.webpages.basepage import BasePage
