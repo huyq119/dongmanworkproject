@@ -59,7 +59,7 @@ class BasePage():
         WebDriverWait(self._driver, 5).until(expected_conditions.element_to_be_clickable(
             (By.CSS_SELECTOR, "#btnLogin")))
         self._driver.find_element(By.CSS_SELECTOR, "#btnLogin").click()
-        above_login = self._driver.find_element(By.CSS_SELECTOR, "#formLogin")
+        above_login = self._driver.find_element(By.CSS_SELECTOR, "#layerMy > div.loginbox_cont")
         ActionChains(self._driver).move_to_element(above_login).perform()
 
         self._driver.find_element(By.CSS_SELECTOR, "#phoneEmailId").send_keys("13301199951")
