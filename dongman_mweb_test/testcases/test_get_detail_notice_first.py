@@ -15,7 +15,7 @@ class TestGetDetailNoticeFirst:
         result = self.main.go_to_notice_first_detail().get_detail_notice()
         time.sleep(4)
         print(result)
-        assert '亲爱的咚粉' in result
+        assert '亲爱的用户' in result
 
     def teardown(self):
         self.main.quit_page()
