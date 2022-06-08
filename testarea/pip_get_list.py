@@ -4,7 +4,7 @@ with open("./worktest.txt") as f:
         i = num.split()
         a = i[0]
         b = i[2]
-        if a in ['Jinja2', 'msal-extensions', 'tidevice', 'pyzmq']:
+        if a in ['tidevice', 'pyzmq', 'protobuf']:
             continue
         else:
             print(f"安装更新包{a}=={b}")
