@@ -125,8 +125,9 @@ class RecommendPost(FastHttpUser):
     #     # print("Response status code:", r.status_code)
     #     assert r_home_index.status_code == 200
 
+
     # @task
-    # def reporting_request_detail(self):
+    # def reporting_request_page_list(self):
     #     # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
     #     # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
     #     #                                                                                            '-11eb-864f'
@@ -148,11 +149,10 @@ class RecommendPost(FastHttpUser):
     #                'content_type': 'application/json',
     #                'cookie': cookie_name}
     #     r_home_index = self.client.get(message_index, headers=headers)
-    #     # print(cookie_name)
-    #     # print(f'单次抽奖结果为：{r_one.text}')
     #
-    #     print(f'测试结果为：{r_home_index.content}({now})')
-    #     # print("Response status code:", r.status_code)
+    #     print(f'测试结果为：{r_home_index.status_code}({now})')
+    #     # with open('./log.txt', mode='ba') as f:
+    #     #     f.write(r_home_index.content)
     #     assert r_home_index.status_code == 200
 
     @task
@@ -181,9 +181,12 @@ class RecommendPost(FastHttpUser):
         # print(cookie_name)
         # print(f'单次抽奖结果为：{r_one.text}')
 
-        print(f'测试结果为：{r_home_index.content}({now})')
+        print(f'测试结果为：{r_home_index.status_code}({now})')
+        # with open('./log.txt',mode='ba') as f:
+        #     f.write(r_home_index.content)
         # print("Response status code:", r.status_code)
         assert r_home_index.status_code == 200
+
     # @task
     # def reporting_request_v4(self):
     #     current_time = int(round(time.time() * 1000))
@@ -233,6 +236,7 @@ class RecommendPost(FastHttpUser):
 
     wait_time = between(5, 15)
 
+
 # class MyCustomShape(LoadTestShape):
 #     # time_limit设置时限整个压测过程为60秒
 #     time_limit = 60
@@ -254,7 +258,6 @@ class RecommendPost(FastHttpUser):
 #             return user_count, self.spawn_rate
 #         return None
 
-
 # class DoubleWave(LoadTestShape):
 #     """
 #     A shape to immitate some specific user behaviour. In this example, midday
@@ -268,7 +271,7 @@ class RecommendPost(FastHttpUser):
 #     """
 #
 #     min_users = 100
-#     peak_one_users = 200
+#     peak_one_users = 300
 #     peak_two_users = 100
 #     time_limit = 60
 #
@@ -287,50 +290,50 @@ class RecommendPost(FastHttpUser):
 #         else:
 #             return None
 #
-# class StagesShape(LoadTestShape):
-#     """
-#     A simply load test shape class that has different user and spawn_rate at
-#     different stages.
-#     Keyword arguments:
-#         stages -- A list of dicts, each representing a stage with the following keys:
-#             duration -- When this many seconds pass the test is advanced to the next stage
-#             users -- Total user count
-#             spawn_rate -- Number of users to start/stop per second
-#             stop -- A boolean that can stop that test at a specific stage
-#         stop_at_end -- Can be set to stop once all stages have run.
-#     """
-#
-#     stages = [
-#         {"duration": 60, "users": 100, "spawn_rate": 10},
-#         {"duration": 120, "users": 200, "spawn_rate": 10},
-#         {"duration": 180, "users": 300, "spawn_rate": 10},
-#         {"duration": 240, "users": 400, "spawn_rate": 10},
-#         {"duration": 300, "users": 500, "spawn_rate": 10},
-#         {"duration": 360, "users": 600, "spawn_rate": 10},
-#         {"duration": 420, "users": 700, "spawn_rate": 10},
-#         {"duration": 480, "users": 800, "spawn_rate": 10},
-#         {"duration": 540, "users": 900, "spawn_rate": 10},
-#         {"duration": 600, "users": 1000, "spawn_rate": 10},
-#         {"duration": 660, "users": 900, "spawn_rate": 10},
-#         {"duration": 720, "users": 800, "spawn_rate": 10},
-#         {"duration": 780, "users": 700, "spawn_rate": 10},
-#         {"duration": 840, "users": 600, "spawn_rate": 10},
-#         {"duration": 900, "users": 500, "spawn_rate": 10},
-#         {"duration": 960, "users": 400, "spawn_rate": 10},
-#         {"duration": 1020, "users": 300, "spawn_rate": 10},
-#         {"duration": 1080, "users": 200, "spawn_rate": 10},
-#         {"duration": 1140, "users": 100, "spawn_rate": 10},
-#     ]
-#
-#     def tick(self):
-#         run_time = self.get_run_time()
-#
-#         for stage in self.stages:
-#             if run_time < stage["duration"]:
-#                 tick_data = (stage["users"], stage["spawn_rate"])
-#                 return tick_data
-#
-#         return None
+class StagesShape(LoadTestShape):
+    """
+    A simply load test shape class that has different user and spawn_rate at
+    different stages.
+    Keyword arguments:
+        stages -- A list of dicts, each representing a stage with the following keys:
+            duration -- When this many seconds pass the test is advanced to the next stage
+            users -- Total user count
+            spawn_rate -- Number of users to start/stop per second
+            stop -- A boolean that can stop that test at a specific stage
+        stop_at_end -- Can be set to stop once all stages have run.
+    """
+
+    stages = [
+        {"duration": 60, "users": 20, "spawn_rate": 5},
+        {"duration": 120, "users": 40, "spawn_rate": 5},
+        {"duration": 180, "users": 60, "spawn_rate": 5},
+        {"duration": 240, "users": 80, "spawn_rate": 5},
+        {"duration": 300, "users": 100, "spawn_rate": 5},
+        {"duration": 360, "users": 120, "spawn_rate": 5},
+        {"duration": 420, "users": 140, "spawn_rate": 5},
+        {"duration": 480, "users": 160, "spawn_rate": 5},
+        {"duration": 540, "users": 180, "spawn_rate": 5},
+        {"duration": 600, "users": 200, "spawn_rate": 5},
+        {"duration": 660, "users": 180, "spawn_rate": 5},
+        {"duration": 720, "users": 160, "spawn_rate": 5},
+        {"duration": 780, "users": 140, "spawn_rate": 5},
+        {"duration": 840, "users": 120, "spawn_rate": 5},
+        {"duration": 900, "users": 100, "spawn_rate": 5},
+        {"duration": 960, "users": 80, "spawn_rate": 5},
+        {"duration": 1020, "users": 60, "spawn_rate": 5},
+        {"duration": 1080, "users": 40, "spawn_rate": 5},
+        {"duration": 1140, "users": 20, "spawn_rate": 5},
+    ]
+
+    def tick(self):
+        run_time = self.get_run_time()
+
+        for stage in self.stages:
+            if run_time < stage["duration"]:
+                tick_data = (stage["users"], stage["spawn_rate"])
+                return tick_data
+
+        return None
 
 # class StepLoadShape(LoadTestShape):
 #     """
