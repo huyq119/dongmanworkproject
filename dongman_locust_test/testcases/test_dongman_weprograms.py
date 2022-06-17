@@ -95,75 +95,22 @@ class RecommendPost(FastHttpUser):
     # host = "https://qaptsapis.dongmanmanhua.cn"
     host = "https://qagateway.dongmanmanhua.cn"
 
-    # @task
-    # def reporting_request_homepage(self):
-    #     # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
-    #     # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
-    #     #                                                                                            '-11eb-864f'
-    #     #                                                                                            '-00163e069c9c']
-    #     current_time = int(round(time.time() * 1000))
-    #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-    #     message_index = "/mp/api/home/index?num=6"
-    #     cookie_name = 'NEO_SES=NGTmxHJyyc0GTfsnlzmg3yFsQI0HKDkKnKwfGC1YsLcOQfePlbr8OJrHYl8z4Pl3jreYQpPKFPlri18s2lTKPWE' \
-    #                   '5Xynfvepyupm4ILz3CZHud6bhm4R7pTgzLr5Cfb7G1K13Zuyp6rxLxFt+U8XdXuV5Z6M8f9x6ZrI69BL28l0+5HDBLVvgLy' \
-    #                   'CrSPt9jURXTzx+pDDW4DfhCLgLIpd9T+NnsMOaOoZewBbE78cZszab5khAfU1r8t0TQN4ve1kBpPw4dtWMMpTqFaDZrpK' \
-    #                   'PwD4kGWR3gYW2st7IV1D8hBx8sShTsMHc++r7HmGo4dyQO/9pLqaqgwzIwKyc9vvru4J2oGAma+jWLROp2JNAfb3s/dwuok' \
-    #                   'vWs+WPb6nqT7bhs1FfIJupCafvvMfP3CmRVQ=='
-    #     headers = {'charset': 'utf-8',
-    #                'Accept-Encoding': 'gzip, deflate, br',
-    #                'User-Agent': 'Mozilla/5.0 (Linux; Android 9; PAR-AL00 Build/HUAWEIPAR-AL00; wv) AppleWebKit/537.36 '
-    #                              '(KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3235 MMWEBSDK/20220505 '
-    #                              'Mobile Safari/537.36 MMWEBID/1878 MicroMessenger/8.0.23.2160(0x28001737) WeChat/'
-    #                              'arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
-    #                'content_type': 'application/json',
-    #                'cookie': cookie_name}
-    #     r_home_index = self.client.get(message_index, headers=headers)
-    #     # print(cookie_name)
-    #     # print(f'单次抽奖结果为：{r_one.text}')
-    #
-    #     print(f'测试结果为：{r_home_index.status_code}({now})')
-    #     # print("Response status code:", r.status_code)
-    #     assert r_home_index.status_code == 200
-
-
-    # @task
-    # def reporting_request_page_list(self):
-    #     # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
-    #     # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
-    #     #                                                                                            '-11eb-864f'
-    #     #                                                                                            '-00163e069c9c']
-    #     current_time = int(round(time.time() * 1000))
-    #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-    #     message_index = "/mp/api/home/episode/info?titleNo=1452&episodeNo=3"
-    #     cookie_name = 'NEO_SES=NGTmxHJyyc0GTfsnlzmg3yFsQI0HKDkKnKwfGC1YsLcOQfePlbr8OJrHYl8z4Pl3jreYQpPKFPlri18s2lTKPWE' \
-    #                   '5Xynfvepyupm4ILz3CZHud6bhm4R7pTgzLr5Cfb7G1K13Zuyp6rxLxFt+U8XdXuV5Z6M8f9x6ZrI69BL28l0+5HDBLVvgLy' \
-    #                   'CrSPt9jURXTzx+pDDW4DfhCLgLIpd9T+NnsMOaOoZewBbE78cZszab5khAfU1r8t0TQN4ve1kBpPw4dtWMMpTqFaDZrpK' \
-    #                   'PwD4kGWR3gYW2st7IV1D8hBx8sShTsMHc++r7HmGo4dyQO/9pLqaqgwzIwKyc9vvru4J2oGAma+jWLROp2JNAfb3s/dwuok' \
-    #                   'vWs+WPb6nqT7bhs1FfIJupCafvvMfP3CmRVQ=='
-    #     headers = {'charset': 'utf-8',
-    #                'Accept-Encoding': 'gzip, deflate, br',
-    #                'User-Agent': 'Mozilla/5.0 (Linux; Android 9; PAR-AL00 Build/HUAWEIPAR-AL00; wv) AppleWebKit/537.36 '
-    #                              '(KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3235 MMWEBSDK/20220505 '
-    #                              'Mobile Safari/537.36 MMWEBID/1878 MicroMessenger/8.0.23.2160(0x28001737) WeChat/'
-    #                              'arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
-    #                'content_type': 'application/json',
-    #                'cookie': cookie_name}
-    #     r_home_index = self.client.get(message_index, headers=headers)
-    #
-    #     print(f'测试结果为：{r_home_index.status_code}({now})')
-    #     # with open('./log.txt', mode='ba') as f:
-    #     #     f.write(r_home_index.content)
-    #     assert r_home_index.status_code == 200
-
     @task
-    def reporting_request_page_list(self):
+    def reporting_request_homepage(self):
         # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
         # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
         #                                                                                            '-11eb-864f'
         #                                                                                            '-00163e069c9c']
         current_time = int(round(time.time() * 1000))
         now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-        message_index = "/mp/api/home/title/info?titleNo=1350"
+        message_index_one = "/mp/api/home/index?num=6"
+        message_index_two = "/mp/api/search/hot/word"
+        message_index_three = "/mp/api/home/title/hot?pageIndex=1&pageSize=30"
+        message_index_four = "/mp/api/member/recently/browse?neoId=" \
+                             "73c51810-0489-11ec-8d14-00163e069554&pageIndex=1&pageSize=15"
+        message_index_five = "/mp/api/home/shelf/status"
+        message_index_six = "/mp/api/home/banner?pageIndex=1&pageSize=12"
+
         cookie_name = 'NEO_SES=NGTmxHJyyc0GTfsnlzmg3yFsQI0HKDkKnKwfGC1YsLcOQfePlbr8OJrHYl8z4Pl3jreYQpPKFPlri18s2lTKPWE' \
                       '5Xynfvepyupm4ILz3CZHud6bhm4R7pTgzLr5Cfb7G1K13Zuyp6rxLxFt+U8XdXuV5Z6M8f9x6ZrI69BL28l0+5HDBLVvgLy' \
                       'CrSPt9jURXTzx+pDDW4DfhCLgLIpd9T+NnsMOaOoZewBbE78cZszab5khAfU1r8t0TQN4ve1kBpPw4dtWMMpTqFaDZrpK' \
@@ -177,64 +124,116 @@ class RecommendPost(FastHttpUser):
                                  'arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
                    'content_type': 'application/json',
                    'cookie': cookie_name}
-        r_home_index = self.client.get(message_index, headers=headers)
+        r_home_index_one = self.client.get(message_index_one, headers=headers)
+        r_home_index_two = self.client.get(message_index_two, headers=headers)
+        r_home_index_three = self.client.get(message_index_three, headers=headers)
+        r_home_index_four = self.client.get(message_index_four, headers=headers)
+        r_home_index_five = self.client.get(message_index_five, headers=headers)
+        r_home_index_six = self.client.get(message_index_six, headers=headers)
+
         # print(cookie_name)
         # print(f'单次抽奖结果为：{r_one.text}')
 
-        print(f'测试结果为：{r_home_index.status_code}({now})')
-        # with open('./log.txt',mode='ba') as f:
-        #     f.write(r_home_index.content)
+        print(f'one测试结果为：{r_home_index_one.status_code}({now})')
+        print(f'two测试结果为：{r_home_index_two.status_code}({now})')
+        print(f'three测试结果为：{r_home_index_three.status_code}({now})')
+        print(f'four测试结果为：{r_home_index_four.status_code}({now})')
+        print(f'five测试结果为：{r_home_index_five.status_code}({now})')
+        print(f'six测试结果为：{r_home_index_six.status_code}({now})')
         # print("Response status code:", r.status_code)
-        assert r_home_index.status_code == 200
+        assert r_home_index_one.status_code == 200
+        assert r_home_index_two.status_code == 200
+        assert r_home_index_three.status_code == 200
+        assert r_home_index_four.status_code == 200
+        assert r_home_index_five.status_code == 200
+        assert r_home_index_six.status_code == 200
 
     # @task
-    # def reporting_request_v4(self):
+    # def reporting_request_page_list(self):
+    #     # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
+    #     # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
+    #     #                                                                                            '-11eb-864f'
+    #     #                                                                                            '-00163e069c9c']
     #     current_time = int(round(time.time() * 1000))
     #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-    #     message_index = "/app/episode/list/v4?expires=1640588894076&language=zh-hans&" \
-    #                     "locale=zh_CN&md5=PS3B087FXX69A42Vt0ksRQ&pageSize=513&" \
-    #                     "platform=APP_IPHONE&serviceZone=CHINA&startIndex=0&titleNo=241&v=8"
-    #     cookie_name = 'NEO_SES=LQsBo2FyKsOnmsYsf9vvbK+GkXPDYEh+03PkCjjETF1ZAXRa9+ZtTbao44wLN59ndqH/' \
-    #                   '0J3H0dCY8+xvmAvjbBwVXI6h3Y4SNIAd0ElH1RZsj4rBLXNCDuIi4TkyMG1uHTNQg+1rn2O7SFT3DyP' \
-    #                   'OphnAUiqLnZSwkTlKQ4PrFH8A/vStwuEXQqOPvhbV/rLj6UUMGpHhFIfTkbDBiV7D6THjDn82Ptcdz5' \
-    #                   'crrMUm8x2Z4XeYIsJJttBKi+RpqL2Q3sJ5OcLGAQ/BkO4yzZZqOalKROmP487Hsaj1IhxgbvQlrRmyT' \
-    #                   'ffmz+hWJQvoM4bjw81/a2u1nuBkhKrsamPa0j1aizy5oDKMr7nAEoeSaQxneaZso1RB8gq390P2Lw' \
-    #                   'RjzliMTxtJ8SMDenJUkwfvYg==;uuid=62F71887058F4F4C980FCF12E6334E15'
-    #     headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
+    #     message_index_one = "/mp/api/home/title/info?titleNo=1452"
+    #     message_index_two = "/mp/api/home/title/similarity?titleNo=1452&pageIndex=1&pageSize=6"
+    #     message_index_three = "/mp/api/home/shelf/status"
+    #     cookie_name = 'NEO_SES=NGTmxHJyyc0GTfsnlzmg3yFsQI0HKDkKnKwfGC1YsLcOQfePlbr8OJrHYl8z4Pl3jreYQpPKFPlri18s2lTKPWE' \
+    #                   '5Xynfvepyupm4ILz3CZHud6bhm4R7pTgzLr5Cfb7G1K13Zuyp6rxLxFt+U8XdXuV5Z6M8f9x6ZrI69BL28l0+5HDBLVvgLy' \
+    #                   'CrSPt9jURXTzx+pDDW4DfhCLgLIpd9T+NnsMOaOoZewBbE78cZszab5khAfU1r8t0TQN4ve1kBpPw4dtWMMpTqFaDZrpK' \
+    #                   'PwD4kGWR3gYW2st7IV1D8hBx8sShTsMHc++r7HmGo4dyQO/9pLqaqgwzIwKyc9vvru4J2oGAma+jWLROp2JNAfb3s/dwuok' \
+    #                   'vWs+WPb6nqT7bhs1FfIJupCafvvMfP3CmRVQ=='
+    #     headers = {'charset': 'utf-8',
     #                'Accept-Encoding': 'gzip, deflate, br',
-    #                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
-    #                              'KHTML, '
-    #                              'like Gecko) Mobile/15E148 ',
-    #                'Cookie': cookie_name}
-    #     r_home_index = self.client.get(message_index, headers=headers)
+    #                'User-Agent': 'Mozilla/5.0 (Linux; Android 9; PAR-AL00 Build/HUAWEIPAR-AL00; wv) AppleWebKit/537.36 '
+    #                              '(KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3235 MMWEBSDK/20220505 '
+    #                              'Mobile Safari/537.36 MMWEBID/1878 MicroMessenger/8.0.23.2160(0x28001737) WeChat/'
+    #                              'arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+    #                'content_type': 'application/json',
+    #                'cookie': cookie_name}
+    #     r_home_index_one = self.client.get(message_index_one, headers=headers)
+    #     r_home_index_two = self.client.get(message_index_two, headers=headers)
+    #     r_home_index_three = self.client.get(message_index_three, headers=headers)
     #
-    #     print(f'测试结果为：{r_home_index.status_code}({now})')
-    #     assert r_home_index.status_code == 200
+    #     print(f'one测试结果为：{r_home_index_one.status_code}({now})')
+    #     print(f'two测试结果为：{r_home_index_two.status_code}({now})')
+    #     print(f'three测试结果为：{r_home_index_three.status_code}({now})')
+    #     # with open('./log.txt', mode='ba') as f:
+    #     #     f.write(r_home_index.content)
+    #     assert r_home_index_one.status_code == 200
+    #     assert r_home_index_two.status_code == 200
+    #     assert r_home_index_three.status_code == 200
 
     # @task
-    # def reporting_request_recommend(self):
+    # def reporting_request_page_reading(self):
+    #     # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
+    #     # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
+    #     #                                                                                            '-11eb-864f'
+    #     #                                                                                            '-00163e069c9c']
     #     current_time = int(round(time.time() * 1000))
     #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
-    #     message_index = "/app/discovery/recommend?expires=1640666715885&language=zh-hans&locale=zh_CN&" \
-    #                     "md5=St_58Qx5hz3puO_PBT2WJw&platform=APP_IPHONE&serviceZone=CHINA"
-    #     cookie_name = 'NEO_SES=LQsBo2FyKsOnmsYsf9vvbK+GkXPDYEh+03PkCjjETF1ZAXRa9+ZtTbao44wLN59ndqH/0J3H0dC' \
-    #                   'Y8+xvmAvjbBwVXI6h3Y4SNIAd0ElH1RZsj4rBLXNCDuIi4TkyMG1uHTNQg+1rn2O7SFT3DyPOphnAUiqLnZSwk' \
-    #                   'TlKQ4PrFH8A/vStwuEXQqOPvhbV/rLj6UUMGpHhFIfTkbDBiV7D6THjDn82Ptcdz5crrMUm8x2Z4XeYIsJJttBKi' \
-    #                   '+RpqL2Q3sJ5OcLGAQ/BkO4yzZZqOalKROmP487Hsaj1IhxgbvQlrRmyTffmz+hWJQvoM4bjw81/a2u1nuBkhKrsam' \
-    #                   'Pa0j1aizy5oDKMr7nAEoeSaQxneaZso1RB8gq390P2LwRjzliMTxtJ8SMDenJUkwfvYg==;uuid=62F71887058F4F4' \
-    #                   'C980FCF12E6334E15'
-    #     headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
-    #                'Accept-Encoding': 'gzip, deflate, br',
-    #                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 ('
-    #                              'KHTML, '
-    #                              'like Gecko) Mobile/15E148 ',
-    #                'Cookie': cookie_name}
-    #     r_home_index = self.client.get(message_index, headers=headers)
+    #     message_index_one = "/mp/api/like/title/count?titleNo=1452&startIndex=145&endIndex=145"
+    #     message_index_two = "/mp/api/home/episode/info?titleNo=1452&episodeNo=145"
+    #     message_index_three = "/mp/api/home/title/info?titleNo=1452"
+    #     message_index_four = "/mp/api/comment?sortBy=favorite&episodeNo=145&titleNo=1452" \
+    #                          "&pageNo=1&limit=50&ignore=&imageNo="
     #
-    #     print(f'测试结果为：{r_home_index.status_code}({now})')
-    #     assert r_home_index.status_code == 200
-
-    wait_time = between(5, 15)
+    #     cookie_name = 'NEO_SES=NGTmxHJyyc0GTfsnlzmg3yFsQI0HKDkKnKwfGC1YsLcOQfePlbr8OJrHYl8z4Pl3jreYQpPKFPlri18s2lTKPWE' \
+    #                   '5Xynfvepyupm4ILz3CZHud6bhm4R7pTgzLr5Cfb7G1K13Zuyp6rxLxFt+U8XdXuV5Z6M8f9x6ZrI69BL28l0+5HDBLVvgLy' \
+    #                   'CrSPt9jURXTzx+pDDW4DfhCLgLIpd9T+NnsMOaOoZewBbE78cZszab5khAfU1r8t0TQN4ve1kBpPw4dtWMMpTqFaDZrpK' \
+    #                   'PwD4kGWR3gYW2st7IV1D8hBx8sShTsMHc++r7HmGo4dyQO/9pLqaqgwzIwKyc9vvru4J2oGAma+jWLROp2JNAfb3s/dwuok' \
+    #                   'vWs+WPb6nqT7bhs1FfIJupCafvvMfP3CmRVQ=='
+    #     headers = {'charset': 'utf-8',
+    #                'Accept-Encoding': 'gzip, deflate, br',
+    #                'User-Agent': 'Mozilla/5.0 (Linux; Android 9; PAR-AL00 Build/HUAWEIPAR-AL00; wv) AppleWebKit/537.36 '
+    #                              '(KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3235 MMWEBSDK/20220505 '
+    #                              'Mobile Safari/537.36 MMWEBID/1878 MicroMessenger/8.0.23.2160(0x28001737) WeChat/'
+    #                              'arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+    #                'content_type': 'application/json',
+    #                'cookie': cookie_name}
+    #     r_home_index_one = self.client.get(message_index_one, headers=headers)
+    #     r_home_index_two = self.client.get(message_index_two, headers=headers)
+    #     r_home_index_three = self.client.get(message_index_three, headers=headers)
+    #     r_home_index_four = self.client.get(message_index_four, headers=headers)
+    #
+    #     # print(cookie_name)
+    #     # print(f'单次抽奖结果为：{r_one.text}')
+    #
+    #     print(f'one测试结果为：{r_home_index_one.status_code}({now})')
+    #     print(f'two测试结果为：{r_home_index_two.status_code}({now})')
+    #     print(f'three测试结果为：{r_home_index_three.status_code}({now})')
+    #     print(f'four测试结果为：{r_home_index_four.status_code}({now})')
+    #
+    #     # with open('./log.txt',mode='ba') as f:
+    #     #     f.write(r_home_index.content)
+    #     # print("Response status code:", r.status_code)
+    #     assert r_home_index_one.status_code == 200
+    #     assert r_home_index_two.status_code == 200
+    #     assert r_home_index_three.status_code == 200
+    #     assert r_home_index_four.status_code == 200
+    #
+    # wait_time = between(5, 15)
 
 
 # class MyCustomShape(LoadTestShape):
@@ -304,25 +303,25 @@ class StagesShape(LoadTestShape):
     """
 
     stages = [
-        {"duration": 60, "users": 20, "spawn_rate": 5},
-        {"duration": 120, "users": 40, "spawn_rate": 5},
-        {"duration": 180, "users": 60, "spawn_rate": 5},
-        {"duration": 240, "users": 80, "spawn_rate": 5},
-        {"duration": 300, "users": 100, "spawn_rate": 5},
-        {"duration": 360, "users": 120, "spawn_rate": 5},
-        {"duration": 420, "users": 140, "spawn_rate": 5},
-        {"duration": 480, "users": 160, "spawn_rate": 5},
-        {"duration": 540, "users": 180, "spawn_rate": 5},
-        {"duration": 600, "users": 200, "spawn_rate": 5},
-        {"duration": 660, "users": 180, "spawn_rate": 5},
-        {"duration": 720, "users": 160, "spawn_rate": 5},
-        {"duration": 780, "users": 140, "spawn_rate": 5},
-        {"duration": 840, "users": 120, "spawn_rate": 5},
-        {"duration": 900, "users": 100, "spawn_rate": 5},
-        {"duration": 960, "users": 80, "spawn_rate": 5},
-        {"duration": 1020, "users": 60, "spawn_rate": 5},
-        {"duration": 1080, "users": 40, "spawn_rate": 5},
-        {"duration": 1140, "users": 20, "spawn_rate": 5},
+        {"duration": 60, "users": 50, "spawn_rate": 5},
+        {"duration": 120, "users": 100, "spawn_rate": 5},
+        {"duration": 180, "users": 150, "spawn_rate": 5},
+        {"duration": 240, "users": 200, "spawn_rate": 5},
+        {"duration": 300, "users": 250, "spawn_rate": 5},
+        {"duration": 360, "users": 300, "spawn_rate": 5},
+        {"duration": 420, "users": 350, "spawn_rate": 5},
+        {"duration": 480, "users": 400, "spawn_rate": 5},
+        {"duration": 540, "users": 450, "spawn_rate": 5},
+        {"duration": 600, "users": 500, "spawn_rate": 5},
+        {"duration": 660, "users": 450, "spawn_rate": 5},
+        {"duration": 720, "users": 400, "spawn_rate": 5},
+        {"duration": 780, "users": 350, "spawn_rate": 5},
+        {"duration": 840, "users": 300, "spawn_rate": 5},
+        {"duration": 900, "users": 250, "spawn_rate": 5},
+        {"duration": 960, "users": 200, "spawn_rate": 5},
+        {"duration": 1020, "users": 150, "spawn_rate": 5},
+        {"duration": 1080, "users": 100, "spawn_rate": 5},
+        {"duration": 1140, "users": 50, "spawn_rate": 5},
     ]
 
     def tick(self):
@@ -358,7 +357,7 @@ class StagesShape(LoadTestShape):
 #
 #         current_step = math.floor(run_time / self.step_time) + 1
 #         return current_step * self.step_load, self.spawn_rate
-
+#
 # Step = namedtuple("Step", ["users", "dwell"])
 
 
