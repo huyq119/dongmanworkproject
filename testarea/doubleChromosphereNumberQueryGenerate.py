@@ -100,8 +100,11 @@ if __name__ == '__main__':
     print('3.随机生成一个幸运号码')
     num = input('请输入操作序号')
     if num == '1':
-        print(phase)
-        print(lucky_num)
+        result = phase+" "+lucky_num
+        print(result)
+        with open('./result_log.txt') as log:
+            log.write(result)
+
     elif num == '2':
         you_phase = input('请输入最新一期期数')
         i = 'y'
