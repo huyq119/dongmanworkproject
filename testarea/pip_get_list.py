@@ -10,3 +10,4 @@ with open("./worktest.txt") as f:
             print(f"安装更新包{a}=={b}")
             os.system(f"pip3 install --upgrade {a}")
 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

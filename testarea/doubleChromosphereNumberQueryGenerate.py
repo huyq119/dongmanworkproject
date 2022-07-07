@@ -102,8 +102,8 @@ if __name__ == '__main__':
     if num == '1':
         result = phase+" "+lucky_num
         print(result)
-        with open('./result_log.txt') as log:
-            log.write(result)
+        with open('./result_log.txt', 'a') as log:
+            log.write('\n'+result)
 
     elif num == '2':
         you_phase = input('请输入最新一期期数')
