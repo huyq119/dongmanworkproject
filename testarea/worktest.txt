@@ -1,2 +1,5 @@
-pyzmq              22.3.0  23.2.0  wheel
-tidevice           0.4.10  0.9.5   wheel
+portalocker 2.4.0   2.5.1   wheel
+PyPDF2      2.4.2   2.5.0   wheel
+pyzmq       22.2.1  23.2.0  wheel
+tidevice    0.4.10  0.9.5   wheel
+urllib3     1.26.9  1.26.10 wheel
