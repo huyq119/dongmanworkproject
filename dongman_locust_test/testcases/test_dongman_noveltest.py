@@ -131,8 +131,6 @@ class RecommendPost(FastHttpUser):
         assert r_home_index_one.status_code == 200
         assert r_home_index_two.status_code == 200
 
-
-
     # @task
     # def reporting_request_novel_info(self):
     #     # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
@@ -164,14 +162,26 @@ class RecommendPost(FastHttpUser):
     #
     #     # print(cookie_name)
     #     # print(f'单次抽奖结果为：{r_one.text}')
+    #     if r_home_index_one.status_code == 200:
+    #         print(f'one测试结果为：{r_home_index_one.status_code}({now})')
+    #     else:
+    #         print(f'测试结果不正常，返回数据为：{r_home_index_one.content}')
+    #     if r_home_index_two.status_code == 200:
+    #         print(f'one测试结果为：{r_home_index_two.status_code}({now})')
+    #     else:
+    #         print(f'测试结果不正常，返回数据为：{r_home_index_two.content}')
+    #     if r_home_index_three.status_code == 200:
+    #         print(f'one测试结果为：{r_home_index_three.status_code}({now})')
+    #     else:
+    #         print(f'测试结果不正常，返回数据为：{r_home_index_three.content}')
     #
-    #     print(f'one测试结果为：{r_home_index_one.status_code}({now})')
-    #     print(f'two测试结果为：{r_home_index_two.status_code}({now})')
-    #     print(f'three测试结果为：{r_home_index_three.status_code}({now})')
     #     # print("Response status code:", r.status_code)
     #     assert r_home_index_one.status_code == 200
     #     assert r_home_index_two.status_code == 200
     #     assert r_home_index_three.status_code == 200
+
+    wait_time = between(4, 6)
+
 
 # class MyCustomShape(LoadTestShape):
 #     # time_limit设置时限整个压测过程为60秒
@@ -207,7 +217,7 @@ class RecommendPost(FastHttpUser):
 #     """
 #
 #     min_users = 100
-#     peak_one_users = 300
+#     peak_one_users = 200
 #     peak_two_users = 100
 #     time_limit = 60
 #
@@ -240,25 +250,25 @@ class RecommendPost(FastHttpUser):
 #     """
 #
 #     stages = [
-#         {"duration": 60, "users": 50, "spawn_rate": 5},
-#         {"duration": 120, "users": 100, "spawn_rate": 5},
-#         {"duration": 180, "users": 150, "spawn_rate": 5},
-#         {"duration": 240, "users": 200, "spawn_rate": 5},
-#         {"duration": 300, "users": 250, "spawn_rate": 5},
-#         {"duration": 360, "users": 300, "spawn_rate": 5},
-#         {"duration": 420, "users": 350, "spawn_rate": 5},
-#         {"duration": 480, "users": 400, "spawn_rate": 5},
-#         {"duration": 540, "users": 450, "spawn_rate": 5},
-#         {"duration": 600, "users": 500, "spawn_rate": 5},
-#         {"duration": 660, "users": 450, "spawn_rate": 5},
-#         {"duration": 720, "users": 400, "spawn_rate": 5},
-#         {"duration": 780, "users": 350, "spawn_rate": 5},
-#         {"duration": 840, "users": 300, "spawn_rate": 5},
-#         {"duration": 900, "users": 250, "spawn_rate": 5},
-#         {"duration": 960, "users": 200, "spawn_rate": 5},
-#         {"duration": 1020, "users": 150, "spawn_rate": 5},
-#         {"duration": 1080, "users": 100, "spawn_rate": 5},
-#         {"duration": 1140, "users": 50, "spawn_rate": 5},
+#         {"duration": 60, "users": 20, "spawn_rate": 5},
+#         {"duration": 120, "users": 40, "spawn_rate": 5},
+#         {"duration": 180, "users": 60, "spawn_rate": 5},
+#         {"duration": 240, "users": 80, "spawn_rate": 5},
+#         {"duration": 300, "users": 100, "spawn_rate": 5},
+#         {"duration": 360, "users": 120, "spawn_rate": 5},
+#         {"duration": 420, "users": 140, "spawn_rate": 5},
+#         {"duration": 480, "users": 160, "spawn_rate": 5},
+#         {"duration": 540, "users": 180, "spawn_rate": 5},
+#         {"duration": 600, "users": 200, "spawn_rate": 5},
+#         {"duration": 660, "users": 180, "spawn_rate": 5},
+#         {"duration": 720, "users": 160, "spawn_rate": 5},
+#         {"duration": 780, "users": 140, "spawn_rate": 5},
+#         {"duration": 840, "users": 120, "spawn_rate": 5},
+#         {"duration": 900, "users": 100, "spawn_rate": 5},
+#         {"duration": 960, "users": 80, "spawn_rate": 5},
+#         {"duration": 1020, "users": 60, "spawn_rate": 5},
+#         {"duration": 1080, "users": 40, "spawn_rate": 5},
+#         {"duration": 1140, "users": 20, "spawn_rate": 5},
 #     ]
 #
 #     def tick(self):
@@ -282,9 +292,9 @@ class RecommendPost(FastHttpUser):
 #     """
 #
 #     step_time = 5
-#     step_load = 50
+#     step_load = 10
 #     spawn_rate = 50
-#     time_limit = 100
+#     time_limit = 150
 #
 #     def tick(self):
 #         run_time = self.get_run_time()
@@ -295,48 +305,48 @@ class RecommendPost(FastHttpUser):
 #         current_step = math.floor(run_time / self.step_time) + 1
 #         return current_step * self.step_load, self.spawn_rate
 #
-# Step = namedtuple("Step", ["users", "dwell"])
+Step = namedtuple("Step", ["users", "dwell"])
 
 
 #
 #
-# class StepLoadShape(LoadTestShape):
-#     """
-#     A step load shape that waits until the target user count has
-#     been reached before waiting on a per-step timer.
-#     The purpose here is to ensure that a target number of users is always reached,
-#     regardless of how slow the user spawn rate is. The dwell time is there to
-#     observe the steady state at that number of users.
-#     Keyword arguments:
-#         targets_with_times -- iterable of 2-tuples, with the desired user count first,
-#             and the dwell (hold) time with that user count second
-#     """
-#
-#     targets_with_times = (Step(5, 10), Step(10, 10), Step(20, 10), Step(30, 10), Step(40, 10), Step(50, 20),
-#                           Step(100, 20), Step(30, 10), Step(20, 10), Step(10, 10), Step(5, 10))
-#
-#     def __init__(self, *args, **kwargs):
-#         self.step = 0
-#         self.time_active = False
-#         super(StepLoadShape, self).__init__(*args, **kwargs)
-#
-#     def tick(self):
-#         if self.step >= len(self.targets_with_times):
-#             return None
-#
-#         target = self.targets_with_times[self.step]
-#         users = self.get_current_user_count()
-#
-#         if target.users == users:
-#             if not self.time_active:
-#                 self.reset_time()
-#                 self.time_active = True
-#             run_time = self.get_run_time()
-#             if run_time > target.dwell:
-#                 self.step += 1
-#                 self.time_active = False
-#
-#         # Spawn rate is the second value here. It is not relevant because we are
-#         # rate-limited by the User init rate.  We set it arbitrarily high, which
-#         # means "spawn as fast as you can"
-#         return target.users, 100
+class StepLoadShape(LoadTestShape):
+    """
+    A step load shape that waits until the target user count has
+    been reached before waiting on a per-step timer.
+    The purpose here is to ensure that a target number of users is always reached,
+    regardless of how slow the user spawn rate is. The dwell time is there to
+    observe the steady state at that number of users.
+    Keyword arguments:
+        targets_with_times -- iterable of 2-tuples, with the desired user count first,
+            and the dwell (hold) time with that user count second
+    """
+
+    targets_with_times = (Step(5, 10), Step(10, 10), Step(20, 10), Step(30, 10), Step(40, 10), Step(50, 20),
+                          Step(100, 20), Step(30, 10), Step(20, 10), Step(10, 10), Step(5, 10))
+
+    def __init__(self, *args, **kwargs):
+        self.step = 0
+        self.time_active = False
+        super(StepLoadShape, self).__init__(*args, **kwargs)
+
+    def tick(self):
+        if self.step >= len(self.targets_with_times):
+            return None
+
+        target = self.targets_with_times[self.step]
+        users = self.get_current_user_count()
+
+        if target.users == users:
+            if not self.time_active:
+                self.reset_time()
+                self.time_active = True
+            run_time = self.get_run_time()
+            if run_time > target.dwell:
+                self.step += 1
+                self.time_active = False
+
+        # Spawn rate is the second value here. It is not relevant because we are
+        # rate-limited by the User init rate.  We set it arbitrarily high, which
+        # means "spawn as fast as you can"
+        return target.users, 100
