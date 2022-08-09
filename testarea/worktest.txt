@@ -1,3 +1,4 @@
-azure-core 1.24.2  1.25.0 wheel
-pyzmq      22.2.1  23.2.0 wheel
-tidevice   0.4.10  0.9.7  wheel
+Flask    2.2.1   2.2.2  wheel
+pyzmq    22.2.1  23.2.0 wheel
+tidevice 0.4.10  0.9.7  wheel
+Werkzeug 2.2.1   2.2.2  wheel
