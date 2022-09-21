@@ -95,27 +95,27 @@ def creatLuckyNum():
 
 
 if __name__ == '__main__':
-    print('1.查询最新一期中奖号码')
-    print('2.查询最新一期你是否中奖')
-    print('3.随机生成一个幸运号码')
-    num = input('请输入操作序号')
-    if num == '1':
-        result = phase+" "+lucky_num
-        print(result)
-        with open('./result_log.txt', 'a') as log:
-            log.write('\n'+result)
+    i = "y"
+    while i == "y":
+        print('1.查询最新一期中奖号码')
+        print('2.查询最新一期你是否中奖')
+        print('3.随机生成一个幸运号码')
+        num = input('请输入操作序号')
+        if num == '1':
+            result = phase+" "+lucky_num
+            print(result)
+            with open('./result_log.txt', 'a') as log:
+                log.write('\n'+result)
 
-    elif num == '2':
-        you_phase = input('请输入最新一期期数')
-        i = 'y'
-        while i == 'y':
-            # your_lucky_num = input('请输入你的号码(以空格分隔)，一共七组数字')
+        elif num == '2':
+            you_phase = input('请输入最新一期期数')
             lottery_list = yaml.safe_load(open("./lotterynumberlist.yml"))
             for number in lottery_list:
                 your_lucky_num = number
                 b = your_lucky_num.split(' ')
                 query(you_phase, b)
-            i = input("是否继续？")
 
-    elif num == '3':
-        creatLuckyNum()
+        elif num == '3':
+            creatLuckyNum()
+
+        i = input("是否继续？")
