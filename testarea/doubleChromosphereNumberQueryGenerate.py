@@ -100,6 +100,7 @@ if __name__ == '__main__':
         print('1.查询最新一期中奖号码')
         print('2.查询最新一期你是否中奖')
         print('3.随机生成一个幸运号码')
+        print('4.退出')
         num = input('请输入操作序号')
         if num == '1':
             result = phase+" "+lucky_num
@@ -117,5 +118,8 @@ if __name__ == '__main__':
 
         elif num == '3':
             creatLuckyNum()
+
+        elif num == '4':
+            break
 
         i = input("是否继续？")

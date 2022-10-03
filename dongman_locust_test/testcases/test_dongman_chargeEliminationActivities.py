@@ -1,3 +1,5 @@
+# -*- coding: utf-8
+
 import os
 import sys
 
@@ -89,125 +91,93 @@ def get_body(neo_id):
 
 
 class RecommendPost(FastHttpUser):
+    # host = "https://qaapis02.dongmanmanhua.cn"
+    # host = "https://qaptsapis.dongmanmanhua.cn"
     host = "https://qam.dongmanmanhua.cn"
 
     @task
-    def reporting_request_one(self):
+    def reporting_request_rewards_get(self):
         cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
         # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
         #                                                                                            '-11eb-864f'
         #                                                                                            '-00163e069c9c']
-        message_ten = "/activity/reward/obtain?activityId=1003&activityTaskId=5&platform=APP_IPHONE&obtainType=ten"
-        message_one = "/activity/reward/obtain?activityId=1003&activityTaskId=5&platform=APP_IPHONE&obtainType=one"
+        current_time = int(round(time.time() * 1000))
+        now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
 
+        message_index = "/activity/recharge/doActivityRechargeTask"
+        preload_ten = {'activityId': '202209261045B25ce0a', 'platform': 'APP_IPHONE', 'taskId': '3'}
+        preload_one = {'activityId': '202209261045B25ce0a', 'platform': 'APP_IPHONE', 'taskId': '2'}
         for cookie in cookie_list:
             headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
                        'Accept-Encoding': 'gzip, deflate, br',
                        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, '
                                      'like Gecko) Mobile/15E148 ',
                        'Cookie': cookie}
-            # r_one = self.client.post(message_one, headers=headers)
-            r_ten = self.client.post(message_ten, headers=headers)
-            # print(cookie_name)
-            # print(f'单次抽奖结果为：{r_one.text}')
-            print(f'十连抽抽奖结果为：{r_ten.text}')
-            # print("Response status code:", r.status_code)
-            assert r_ten.status_code == 200
-        wait_time = between(1, 10)
+            r_reward_ten = self.client.post(message_index, headers=headers, data=preload_ten)
+            r_reward_one = self.client.post(message_index, headers=headers, data=preload_one)
+            print(f"十连抽测试结果为:{r_reward_ten.text}({now})")
+            # print(f"点击抽奖结果为:{r_reward_one.text}({now})")
+            assert r_reward_ten.status_code == 200
+            # assert r_reward_one.status_code == 2000
+            wait_time = between(4, 6)
 
-    @task
-    def reporting_request_two(self):
-        cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
-        # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
-        #                                                                                            '-11eb-864f'
-        #                                                                                            '-00163e069c9c']
-        message = "/activity/reward/obtain?activityId=1003&activityTaskId=5&platform=APP_IPHONE&obtainType=one"
-        for cookie_name in cookie_list:
-            headers = {'Accept': 'application/json, text/javascript, */*; q=0.01', 'X-R': 'XMLHttpRequest',
-                       'Accept-Encoding': 'gzip, deflate, br',
-                       'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, '
-                                     'like Gecko) Mobile/15E148 ',
-                       'Cookie': cookie_name}
-            r = self.client.post(message, headers=headers)
-            # print(cookie_name)
-            print(f'第二遍单次抽奖结果为：{r.text}')
-            # print("Response status code:", r.status_code)
-            assert r.status_code == 200
-        wait_time = between(1, 10)
+    # @task
+    # def reporting_request_novel_info(self):
+    #     # cookie_list = yaml.safe_load(open("../basefile/cookie.yml"))
+    #     # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
+    #     #                                                                                            '-11eb-864f'
+    #     #                                                                                            '-00163e069c9c']
+    #     current_time = int(round(time.time() * 1000))
+    #     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time / 1000))
+    #     message_index_one = "/novel/episode/info?expires=1658828007640&language=zh-hans&locale=zh_CN&md5=AOHQ2uJ" \
+    #                         "-LhxRGqUBl8CEdA&novelEpisodeNo=1&novelId=100000009&platform=APP_IPHONE&serviceZone=CHINA "
+    #     message_index_two = "/v2/comment?episodeNo=1&expires=1658828007640&language=zh-hans&locale=zh_CN&md5" \
+    #                         "=ZE0CxS64XfxUInfByY1Ngg&platform=APP_IPHONE&serviceZone=CHINA&sortBy=favorite&titleNo" \
+    #                         "=100000009 "
+    #     message_index_three = "/app/novel/recommend?expires=1658828007640&language=zh-hans&locale=zh_CN&md5=Jwu" \
+    #                           "-ZxmHE0e8tjEZ6Ujajg&novelId=100000009&platform=APP_IPHONE&serviceZone=CHINA "
+    #
+    #     cookie_name = 'NEO_SES=null;uuid=7fa2deac7d8a5cf5e86dfcc4110594e4'
+    #     headers = {'charset': 'utf-8',
+    #                'Accept-Encoding': 'gzip, deflate, br',
+    #                'User-Agent': 'Mozilla/5.0 (Linux; Android 9; PAR-AL00 Build/HUAWEIPAR-AL00; wv) AppleWebKit/537.36 '
+    #                              '(KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3235 MMWEBSDK/20220505 '
+    #                              'Mobile Safari/537.36 MMWEBID/1878 MicroMessenger/8.0.23.2160(0x28001737) WeChat/'
+    #                              'arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+    #                'content_type': 'application/json',
+    #                'Cookie': cookie_name}
+    #     r_home_index_one = self.client.get(message_index_one, headers=headers)
+    #     r_home_index_two = self.client.get(message_index_two, headers=headers)
+    #     r_home_index_three = self.client.get(message_index_three, headers=headers)
+    #
+    #     # print(cookie_name)
+    #     # print(f'单次抽奖结果为：{r_one.text}')
+    #     if r_home_index_one.status_code == 200:
+    #         print(f'one测试结果为：{r_home_index_one.status_code}({now})')
+    #     else:
+    #         print(f'测试结果不正常，返回数据为：{r_home_index_one.content}')
+    #     if r_home_index_two.status_code == 200:
+    #         print(f'one测试结果为：{r_home_index_two.status_code}({now})')
+    #     else:
+    #         print(f'测试结果不正常，返回数据为：{r_home_index_two.content}')
+    #     if r_home_index_three.status_code == 200:
+    #         print(f'one测试结果为：{r_home_index_three.status_code}({now})')
+    #     else:
+    #         print(f'测试结果不正常，返回数据为：{r_home_index_three.content}')
+    #
+    #     # print("Response status code:", r.status_code)
+    #     assert r_home_index_one.status_code == 200
+    #     assert r_home_index_two.status_code == 200
+    #     assert r_home_index_three.status_code == 200
 
-# class RecommendPost(FastHttpUser):
-#     host = "https://qam.dongmanmanhua.cn"
-#
-#     @task
-#     def reporting_request_one(self):
-#         id_list = yaml.safe_load(open("../dongmanlocustproject/neoid.yml"))
-#         # id_list = ['66437720-1b6f-11ec-a291-00163e06a3f6', '039b7270-1b52-11ec-864f-00163e069c9c', 'ffe4db10-f8cb'
-#         #                                                                                            '-11eb-864f'
-#         #                                                                                            '-00163e069c9c']
-#         message = "/activity/reward/obtain?activityId=1003&activityTaskId=5&platform=APP_IPHONE&obtainType=ten"
-#         for neo_id in id_list:
-#             headers = {
-#                 'Cookie': 'sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%2217cfe58cd404e5-004bab7b79d5858'
-#                           '-3b176a50-329160-17cfe58cd415bf%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22'
-#                           '%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22'
-#                           '%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5'
-#                           '%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22%24device_id%22%3A'
-#                           '%2217cfe58cd404e5-004bab7b79d5858-3b176a50-329160-17cfe58cd415bf%22%7D; '
-#                           'NEO_CHK="r5V0mf9uRUZHZ/vmLGy3e8Ed3LlprsvPeTm0Or0OAkszRch18MzTTgQSrK5k8zc/Rynlbd9SAOZWYe'
-#                           '+CMBoyxR65BNZaWPPcY/bW7bYoveu2uEJYvvHo/wd4AJvwwbXntg9gcaXfdXd8XT42P1xKZhHY'
-#                           '+bef5qTyt29W7KaWrug="; '
-#                           'NEO_SES="CIKjjsdj9t4lSoc6G13RB0XJM5A6KO/3BFTJJzUBo1OVU1PmKSmVrUp2cx2MoRzGQ1XiwvsH5'
-#                           '+7YEaSewtABqA0pzSVeaVk1sIaxLDC+lxX1+zfxH6GIX53PQh7AQL+u/6xWaKMiiJ'
-#                           '+jAr3SZsp0VubaETyGk2Jd27deZ2LV25/teq6mTJX1K3RSwH/eOp'
-#                           '+HO9gHKWw5QG7m8wOYUOP8U0OxFYtMa14xqITQbNnquAGJEGDZcgBYPET20AbDqsf/cTt+/4RzpEX9'
-#                           '/PfzsUpag2wffMstdllvNQFs92uz9ki4r9V40RsRV5tK4vjsuYOSM2/95TeDgEC'
-#                           '+C28ppNKUfEjmYi0rYbGFjYz5SOyuU35oKFFieE7snld5V46M8onKP7rl0C+EPnrq+51HzNNGeA=="; '
-#                           'install_id=7215449203892887553; ttreq=1$f3e0aad47efe20ecab13a1f7d7b95bfd93b5d1bd; '
-#                           'currentAppVersion=279; wtu="a2b53189835796aa9adf7c8761a90c9c"; '
-#                           'NEO_CHK="r5V0mf9uRUZHZ/vmLGy3e8Ed3LlprsvPeTm0Or0OAkszRch18MzTTgQSrK5k8zc/Rynlbd9SAOZWYe'
-#                           '+CMBoyxR65BNZaWPPcY/bW7bYoveu2uEJYvvHo/wd4AJvwwbXn9TcgZZRzqtywFzUDTlCUOWgi1K21vg'
-#                           '+jKPGxI3H66JI="; locale=zh_CN; JSESSIONID=B02E366C3CC4A55AE255035E3A00230C',
-#                 'Accept': 'application/json, text/javascript, */*; q=0.01',
-#                 'X-R': 'XMLHttpRequest',
-#                 'Accept-Encoding': 'gzip, deflate, br',
-#                 'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, '
-#                               'like Gecko) Mobile/15E148 '
-#             }
-#             r = self.client.post(message, headers=headers)
-#             print(r.text)
-#             # print("Response status code:", r.status_code)
-#             assert r.status_code == 200
-#         wait_time = between(1, 10)
 
-# class EpisodeList(FastHttpUser):
-#     host = "https://qaapis.dongmanmanhua.cn"
-#
-#     @tag('tag1')
-#     @task
-#     def test_new(self):
-#         message = "/app/episode/list/v4?expires=1634972054459&language=zh-hans&locale=zh_CN&md5=EQAb0BWn7ohgVq" \
-#                   "-B_EGz4w&pageSize=214&platform=APP_IPHONE&serviceZone=CHINA&startIndex=0&titleNo=735&v=8 "
-#         r = self.client.get(message)
-#         print(r.status_code)
-#         wait_time = between(1, 5)
-#
-#     @tag('tag2')
-#     @task
-#     def test_card4(self):
-#         for title_name in yaml.safe_load(open("../dongmanlocustproject/title_name.yml")):
-#             message = f"/app/home/card4?expires=1634028869836&language=zh-hans&locale=zh_CN" \
-#                       f"&md5=AiUM4xmOUDt5H4YmIdPAWA&platform=APP_IPHONE&serviceZone=CHINA&sortOrder=UPDATE&" \
-#                       f"weekday={title_name}&bannerImageType=Default"
-#             r = self.client.get(message)
-#             assert r.status_code == 200
-#         wait_time = between(1, 5)
 
 
 # class MyCustomShape(LoadTestShape):
 #     # time_limit设置时限整个压测过程为60秒
 #     time_limit = 60
 #     # 设置产生率一次启动10个用户
-#     spawn_rate = 1
+#     spawn_rate = 10
 #
 #     def tick(self):
 #         """
@@ -224,7 +194,6 @@ class RecommendPost(FastHttpUser):
 #             return user_count, self.spawn_rate
 #         return None
 
-
 # class DoubleWave(LoadTestShape):
 #     """
 #     A shape to immitate some specific user behaviour. In this example, midday
@@ -237,9 +206,9 @@ class RecommendPost(FastHttpUser):
 #         time_limit -- total length of test
 #     """
 #
-#     min_users = 20
-#     peak_one_users = 40
-#     peak_two_users = 20
+#     min_users = 100
+#     peak_one_users = 200
+#     peak_two_users = 100
 #     time_limit = 60
 #
 #     def tick(self):
@@ -256,7 +225,7 @@ class RecommendPost(FastHttpUser):
 #             return round(user_count), round(user_count)
 #         else:
 #             return None
-
+#
 # class StagesShape(LoadTestShape):
 #     """
 #     A simply load test shape class that has different user and spawn_rate at
@@ -271,12 +240,25 @@ class RecommendPost(FastHttpUser):
 #     """
 #
 #     stages = [
-#         {"duration": 60, "users": 1, "spawn_rate": 1},
-#         {"duration": 100, "users": 1, "spawn_rate": 1},
-#         {"duration": 180, "users": 1, "spawn_rate": 1},
-#         {"duration": 220, "users": 1, "spawn_rate": 1},
-#         {"duration": 230, "users": 1, "spawn_rate": 1},
-#         {"duration": 240, "users": 1, "spawn_rate": 1},
+#         {"duration": 60, "users": 20, "spawn_rate": 5},
+#         {"duration": 120, "users": 40, "spawn_rate": 5},
+#         {"duration": 180, "users": 60, "spawn_rate": 5},
+#         {"duration": 240, "users": 80, "spawn_rate": 5},
+#         {"duration": 300, "users": 100, "spawn_rate": 5},
+#         {"duration": 360, "users": 120, "spawn_rate": 5},
+#         {"duration": 420, "users": 140, "spawn_rate": 5},
+#         {"duration": 480, "users": 160, "spawn_rate": 5},
+#         {"duration": 540, "users": 180, "spawn_rate": 5},
+#         {"duration": 600, "users": 200, "spawn_rate": 5},
+#         {"duration": 660, "users": 180, "spawn_rate": 5},
+#         {"duration": 720, "users": 160, "spawn_rate": 5},
+#         {"duration": 780, "users": 140, "spawn_rate": 5},
+#         {"duration": 840, "users": 120, "spawn_rate": 5},
+#         {"duration": 900, "users": 100, "spawn_rate": 5},
+#         {"duration": 960, "users": 80, "spawn_rate": 5},
+#         {"duration": 1020, "users": 60, "spawn_rate": 5},
+#         {"duration": 1080, "users": 40, "spawn_rate": 5},
+#         {"duration": 1140, "users": 20, "spawn_rate": 5},
 #     ]
 #
 #     def tick(self):
@@ -299,10 +281,10 @@ class RecommendPost(FastHttpUser):
 #         time_limit -- Time limit in seconds
 #     """
 #
-#     step_time = 3
-#     step_load = 1
-#     spawn_rate = 1
-#     time_limit = 60
+#     step_time = 5
+#     step_load = 10
+#     spawn_rate = 50
+#     time_limit = 150
 #
 #     def tick(self):
 #         run_time = self.get_run_time()
@@ -312,10 +294,12 @@ class RecommendPost(FastHttpUser):
 #
 #         current_step = math.floor(run_time / self.step_time) + 1
 #         return current_step * self.step_load, self.spawn_rate
-
+#
 # Step = namedtuple("Step", ["users", "dwell"])
 #
 #
+# #
+# #
 # class StepLoadShape(LoadTestShape):
 #     """
 #     A step load shape that waits until the target user count has
