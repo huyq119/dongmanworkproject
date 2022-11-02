@@ -4,7 +4,7 @@ with open("./worktest.txt") as f:
         i = num.split()
         a = i[0]
         b = i[2]
-        if a in ['tidevice']:
+        if a in ['tidevice', 'charset-normalizer']:
             continue
         else:
             print(f"安装更新包{a}=={b}")
