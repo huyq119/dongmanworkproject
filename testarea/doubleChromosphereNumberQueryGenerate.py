@@ -31,23 +31,24 @@ def query(you_phase, your_lucky_num):
             flag = True  # 蓝色球相同
         winningNumbers = list(set(a[0:6]).intersection(set(your_lucky_num[0:6])))
         count = len(winningNumbers)
-        print("中奖红色号码为：" + str(winningNumbers))
+        print("红色号码中了：" + str(winningNumbers))
         #
         # for i in a[0:6]:
         #     for j in your_lucky_num[0:6]:
         #         if i == j:
         #             count = count + 1  # count:1 红球有n个相同，则count=n
         if flag:  # 蓝色球中了
+            blue = a[6]
             if count <= 2:
-                print('恭喜你，中了六等奖！')
+                print(f'恭喜你，中了六等奖！蓝色球中了{blue}')
             elif count == 3:
-                print('恭喜你，中了五等奖！')
+                print(f'恭喜你，中了五等奖！蓝色球中了{blue}')
             elif count == 4:
-                print('恭喜你，中了四等奖！')
+                print(f'恭喜你，中了四等奖！蓝色球中了{blue}')
             elif count == 5:
-                print('恭喜你，中了三等奖！')
+                print(f'恭喜你，中了三等奖！蓝色球中了{blue}')
             elif count == 6:
-                print('恭喜你，中了一等奖！')
+                print(f'恭喜你，中了一等奖！蓝色球中了{blue}')
         elif not flag:
             if count <= 3:
                 print('很遗憾，你没有中奖！')
