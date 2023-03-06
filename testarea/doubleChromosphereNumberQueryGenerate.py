@@ -68,7 +68,7 @@ def creatLuckyNum():
     numbers_list = []
     for i in range(5):
         # blueball = random.randint(1, 16)
-        blueball = 1
+        blueball = 4
         luckynum1 = ''
         judgement = []
         r = 0
