@@ -1,11 +1,12 @@
-charset-normalizer 2.1.1   3.1.0   wheel
-ConfigArgParse     1.5.3   1.5.5   wheel
-cryptography       38.0.4  41.0.1  wheel
-Faker              18.11.1 18.11.2 wheel
-hypothesis         6.79.3  6.80.0  wheel
-python-slugify     6.1.2   8.0.1   wheel
-tidevice           0.4.10  0.10.9  wheel
-urllib3            1.26.16 2.0.3   wheel
-websocket-client   1.3.3   1.6.1   wheel
+charset-normalizer 2.1.1   3.1.0  wheel
+cryptography       38.0.4  41.0.1 wheel
+minium             1.4.1   1.4.2  sdist
+pandas             2.0.2   2.0.3  wheel
+Pillow             9.5.0   10.0.0 wheel
+python-slugify     6.1.2   8.0.1  wheel
+tidevice           0.4.10  0.10.9 wheel
+trio               0.22.0  0.22.1 wheel
+typing_extensions  4.6.3   4.7.1  wheel
+websocket-client   1.3.3   1.6.1  wheel
 
 
