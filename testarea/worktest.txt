@@ -1,4 +1,6 @@
 charset-normalizer 3.2.0   3.3.2  wheel
 cryptography       41.0.4  42.0.5 wheel
-Faker              24.1.0  24.2.0 wheel
-setuptools         69.1.1  69.2.0 wheel
+Faker              24.2.0  24.4.0 wheel
+ipykernel          6.29.3  6.29.4 wheel
+msal               1.27.0  1.28.0 wheel
+
