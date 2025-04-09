@@ -8,7 +8,6 @@ def install_package(package_name):
     cmd = ["pip3", "install", "--upgrade", package_name]
     subprocess.run(cmd, check=True)
 
-
 # 指定要跳过更新的包名
 skip_list = ['tidevice', 'charset-normalizer', 'websocket-client', 'cryptography', 'greenlet', 'python-slugify']
 
